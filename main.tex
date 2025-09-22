@@ -51,8 +51,8 @@
 
 \institution{Instituto de Computação, Universidade Federal de Alagoas}
 %\footinfo{Relatório elaborado com classe \LaTeX\ Tau}
-\theday{agosto de 2025}
-\leadauthor{Souza, Santos e Costa}
+\theday{setembro de 2025}
+\leadauthor{Souza, Santos, Costa e Cedrim}
 \course{Engenharia de Computação - Sistemas de Controle 1}
 
 %----------------------------------------------------------
@@ -60,11 +60,11 @@
 %----------------------------------------------------------
 
 \begin{abstract}    
-   Este trabalho apresenta o desenvolvimento e análise de um sistema de controle de posição baseado em um modelo massa-mola com configuração vertical. O sistema é composto por uma única massa posicionada entre duas molas, sendo a mola superior conectada a uma haste acionada por uma engrenagem, movimentada por um motor de corrente contínua (DC), enquanto a mola inferior é fixada à base do sistema.
+    O projeto tem como objetivo o estudo e implementação de um sistema de controle de posição em uma configuração massa-mola com duas massas acopladas por molas, representando situações práticas de sistemas com ligação elástica entre atuador e carga.
    
-    A proposta visa estudar o comportamento dinâmico de sistemas com acoplamento elástico e resposta vertical sob influência gravitacional, explorando sua aplicação no controle de movimento em estruturas flexíveis. A posição da massa é monitorada por um sensor a laser, que fornece o sinal de realimentação para um controlador proporcional-integral (PI), responsável por ajustar a tensão aplicada ao motor e manter a posição de referência.
+    O problema central consiste em manter a posição controlada da massa de saída, mesmo diante das oscilações e acoplamentos internos do sistema. Para isso, pretende-se desenvolver um modelo matemático, realizar simulações computacionais.
 
-    A modelagem do sistema é fundamentada na Lei de Hooke, considerando forças restauradoras das molas e a atuação do motor como entrada de controle. A Transformada de Laplace será utilizada para a obtenção da função de transferência entre a tensão aplicada ao motor e a posição da massa, permitindo a análise da resposta dinâmica e a definição de parâmetros adequados de controle.
+    O foco é a obtenção do modelo matemático que descreve a dinâmica do sistema e sua simulção em malha aberta, servindo de base para o projeto e implementação do controlador de posição.
 \end{abstract}
 
 %----------------------------------------------------------
@@ -82,16 +82,6 @@
     % \linenumbers 
     
 %----------------------------------------------------------
-
-\section{Introdução}
-
-    \taustart{O}sistema massa-mola é um modelo físico clássico utilizado no estudo da dinâmica de sistemas oscilatórios. Consiste, em sua forma básica, em uma ou mais massas conectadas a molas, cuja força restauradora é descrita pela Lei de Hooke. Devido à sua simplicidade e capacidade de representar uma ampla gama de comportamentos dinâmicos, esse sistema é amplamente utilizado como base para a modelagem, simulação e controle de sistemas mecânicos reais.
-
-    Além de seu valor acadêmico, o modelo massa-mola possui diversas aplicações práticas. No setor automotivo, por exemplo, sistemas de suspensão utilizam molas para absorver impactos e estabilizar veículos. Em ambientes industriais, molas são aplicadas em dispositivos de medição, sistemas de amortecimento e na estabilização de estruturas. Dessa forma, compreender o comportamento desse tipo de sistema permite extrapolar conceitos para o desenvolvimento e controle de sistemas mais complexos.
-
-    Do ponto de vista do controle, o sistema massa-mola oferece uma plataforma adequada para a implementação e análise de algoritmos como os controladores proporcional-integral-derivativo (PID). No presente projeto, adota-se o controlador proporcional-integral (PI), com o objetivo de manter a posição vertical de uma massa única em equilíbrio, mesmo diante de perturbações ou oscilações resultantes da atuação mecânica do motor e da elasticidade das molas.
-
-    O objetivo deste trabalho é desenvolver um protótipo físico de um sistema massa-mola com configuração vertical, composto por uma única massa conectada entre duas molas, sendo controlado por um motor DC e monitorado por um sensor a laser. Busca-se analisar o comportamento dinâmico do sistema e validar as estratégias de controle propostas com base nos dados experimentais.
 
 \section{Descrição do Sistema}
 
