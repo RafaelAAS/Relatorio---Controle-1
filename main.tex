@@ -1,0 +1,184 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% --------------------------------------------------------
+% Tau
+% LaTeX Template
+% Version 2.4.4 (28/02/2025)
+%
+% Author: 
+% Guillermo Jimenez (memo.notess1@gmail.com)
+% 
+% License:
+% Creative Commons CC BY 4.0
+% --------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[9pt,a4paper,twocolumn,twoside]{tau-class/tau}
+\usepackage[portuguese]{babel}
+%% Spanish babel recomendation
+% \usepackage[spanish,es-nodecimaldot,es-noindentfirst]{babel} 
+%% Draft watermark
+% \usepackage{draftwatermark}
+%----------------------------------------------------------
+% TITLE
+%----------------------------------------------------------
+
+\journalname{Relatório de Sistema de Controle 1 - Engenharia de Computação}
+\title{Controle de Posição em Sistema Massa-Mola com Conexão Flexível}
+
+%----------------------------------------------------------
+% AUTHORS, AFFILIATIONS AND PROFESSOR
+%----------------------------------------------------------
+
+\author[a,1]{Rafael Anacleto Alves de Souza}
+\author[a,2]{Elvis Correia Lopes dos Santos}
+\author[a,3]{Guilherme de Oliveira Costa}
+\author[a,4]{Pedro de Carvalho Cedrim}
+
+
+%----------------------------------------------------------
+
+\affil[a]{Instituto de Computação, Universidade Federal de Alagoas – Campus A.C. Simões\\
+\textsuperscript{1}\texttt{raas@ic.ufal.br}, 
+\textsuperscript{2}\texttt{ecls@ic.ufal.br}, 
+\textsuperscript{3}\texttt{goc@ic.ufal.br},
+\textsuperscript{4}\texttt{pcc@ic.ufal.br}}
+
+\professor{Prof. Dr. Icaro Bezerra Queiroz de Araujo}
+
+%----------------------------------------------------------
+% FOOTER INFORMATION
+%----------------------------------------------------------
+
+\institution{Instituto de Computação, Universidade Federal de Alagoas}
+%\footinfo{Relatório elaborado com classe \LaTeX\ Tau}
+\theday{agosto de 2025}
+\leadauthor{Souza, Santos e Costa}
+\course{Engenharia de Computação - Sistemas de Controle 1}
+
+%----------------------------------------------------------
+% ABSTRACT AND KEYWORDS
+%----------------------------------------------------------
+
+\begin{abstract}    
+   Este trabalho apresenta o desenvolvimento e análise de um sistema de controle de posição baseado em um modelo massa-mola com configuração vertical. O sistema é composto por uma única massa posicionada entre duas molas, sendo a mola superior conectada a uma haste acionada por uma engrenagem, movimentada por um motor de corrente contínua (DC), enquanto a mola inferior é fixada à base do sistema.
+   
+    A proposta visa estudar o comportamento dinâmico de sistemas com acoplamento elástico e resposta vertical sob influência gravitacional, explorando sua aplicação no controle de movimento em estruturas flexíveis. A posição da massa é monitorada por um sensor a laser, que fornece o sinal de realimentação para um controlador proporcional-integral (PI), responsável por ajustar a tensão aplicada ao motor e manter a posição de referência.
+
+    A modelagem do sistema é fundamentada na Lei de Hooke, considerando forças restauradoras das molas e a atuação do motor como entrada de controle. A Transformada de Laplace será utilizada para a obtenção da função de transferência entre a tensão aplicada ao motor e a posição da massa, permitindo a análise da resposta dinâmica e a definição de parâmetros adequados de controle.
+\end{abstract}
+
+%----------------------------------------------------------
+
+\keywords{sistema massa-mola, controle de posição, controle PI, acoplamento elástico, resposta dinâmica, two-mass system}
+
+%----------------------------------------------------------
+
+\begin{document}
+		
+    \maketitle 
+    \thispagestyle{firststyle} 
+    \tauabstract
+    % \tableofcontents
+    % \linenumbers 
+    
+%----------------------------------------------------------
+
+\section{Introdução}
+
+    \taustart{O}sistema massa-mola é um modelo físico clássico utilizado no estudo da dinâmica de sistemas oscilatórios. Consiste, em sua forma básica, em uma ou mais massas conectadas a molas, cuja força restauradora é descrita pela Lei de Hooke. Devido à sua simplicidade e capacidade de representar uma ampla gama de comportamentos dinâmicos, esse sistema é amplamente utilizado como base para a modelagem, simulação e controle de sistemas mecânicos reais.
+
+    Além de seu valor acadêmico, o modelo massa-mola possui diversas aplicações práticas. No setor automotivo, por exemplo, sistemas de suspensão utilizam molas para absorver impactos e estabilizar veículos. Em ambientes industriais, molas são aplicadas em dispositivos de medição, sistemas de amortecimento e na estabilização de estruturas. Dessa forma, compreender o comportamento desse tipo de sistema permite extrapolar conceitos para o desenvolvimento e controle de sistemas mais complexos.
+
+    Do ponto de vista do controle, o sistema massa-mola oferece uma plataforma adequada para a implementação e análise de algoritmos como os controladores proporcional-integral-derivativo (PID). No presente projeto, adota-se o controlador proporcional-integral (PI), com o objetivo de manter a posição vertical de uma massa única em equilíbrio, mesmo diante de perturbações ou oscilações resultantes da atuação mecânica do motor e da elasticidade das molas.
+
+    O objetivo deste trabalho é desenvolver um protótipo físico de um sistema massa-mola com configuração vertical, composto por uma única massa conectada entre duas molas, sendo controlado por um motor DC e monitorado por um sensor a laser. Busca-se analisar o comportamento dinâmico do sistema e validar as estratégias de controle propostas com base nos dados experimentais.
+
+\section{Descrição do Sistema}
+
+O sistema massa-mola proposto neste projeto adota uma configuração vertical, composta por uma única massa posicionada entre duas molas. A mola superior está conectada a uma haste, acoplada a uma engrenagem acionada por um motor de corrente contínua (DC), enquanto a mola inferior é fixada à base do sistema. A rotação do motor atua sobre a engrenagem, deformando a mola superior e, com isso, provocando o deslocamento vertical da massa.
+
+O controle da posição da massa é realizado por meio de um sensor a laser posicionado na base do sistema, responsável por medir continuamente a distância da massa em relação à referência fixa. Esse sinal de realimentação é utilizado por um controlador proporcional-integral (PI), que ajusta a tensão aplicada ao motor com base no erro entre a posição medida e a posição desejada.
+
+Para evitar interferências mecânicas e vibrações laterais indesejadas, a massa se movimenta dentro de um cilindro plástico transparente que atua como guia passivo. Esse cilindro não entra em contato direto com a massa, apenas restringe seu movimento transversal, mantendo a estabilidade da trajetória vertical sem introduzir atrito significativo.
+
+A montagem do sistema foi pensada para minimizar problemas comuns em estruturas horizontais, como o atrito entre a base e os elementos móveis. A disposição vertical também facilita a atuação gravitacional e a análise do sistema em termos de energia potencial, amortecimento e resposta transitória sob diferentes condições de rigidez das molas.
+
+Embora o modelo mostrado nas Figuras e não tenha sido utilizado diretamente neste projeto, ele serviu como base conceitual e visual para o desenvolvimento de um sistema massa-mola simplificado, construído do zero.
+
+\section{Revisão Bibliográfica}
+
+    Nesta seção são apresentados estudos relacionados ao controle de sistemas massa-mola com acoplamento flexível, bem como abordagens utilizadas para sua modelagem matemática e implementação de controladores. Os trabalhos revisados fornecem embasamento teórico para o desenvolvimento do protótipo e da estratégia de controle utilizada neste projeto.
+
+    Sasidhar et al.~\cite{sasidhar2025} propõem a fabricação e análise experimental de um aparato físico voltado à caracterização de molas, com foco na determinação da rigidez ($k$) em regimes de compressão e tração. O sistema desenvolvido consiste em uma estrutura vertical com base em aço doce e uma régua milimetrada para medição da deflexão, sendo aplicadas massas em um gancho tipo “S” para obtenção da relação força versus deslocamento. Embora o estudo seja conduzido em malha aberta, os autores validam a Lei de Hooke experimentalmente ao demonstrar a linearidade entre força aplicada e extensão da mola, utilizando a equação $k = \frac{F}{y}$. Além disso, o artigo revisa diversos trabalhos relevantes à dinâmica de sistemas massa-mola, incluindo a análise de vibração forçada em estruturas com múltiplos graus de liberdade e aplicações na biomecânica e engenharia civil.
+
+    Apesar de não abordar diretamente técnicas de controle, a revisão bibliográfica do trabalho inclui referências fundamentais para este projeto. Dentre os trabalhos citados por Sasidhar et al.~\cite{sasidhar2025}, destaca-se um que trata do controle de um sistema duplo massa-mola-amortecedor com abordagens clássicas como P, PI, PID e espaço de estados, além da utilização de ferramentas como diagramas de Bode e Lugar das Raízes — obtidos a partir de funções de transferência derivadas via Transformada de Laplace. Essa referência também discute a construção de uma interface gráfica de simulação, sugerindo o uso de ambientes como MATLAB/Simulink. Com base na abordagem de Sasidhar et al., optou-se por desenvolver um protótipo físico vertical com estrutura simplificada, validando inicialmente a modelagem através da Lei de Hooke e, posteriormente, aplicando estratégias de controle baseadas na literatura identificada.
+
+    O estudo de Noerafifah et al.~\cite{noerafifah2025} investiga a relação entre massa, constante elástica e energia potencial em sistemas massa-mola por meio de simulações no ambiente virtual PhET. O principal objetivo do trabalho foi validar os princípios da Lei de Hooke sem a necessidade de um aparato físico, utilizando exclusivamente dados quantitativos gerados pela plataforma. Dois experimentos principais foram conduzidos: o primeiro, para determinar a constante elástica da mola aplicando massas conhecidas e analisando a deformação resultante; o segundo, para estimar massas desconhecidas a partir da deformação observada e do valor de $k$ previamente calculado.
+
+    A fundamentação teórica do artigo é baseada diretamente na equação de Hooke $F = -k \Delta x$, sendo também utilizada sua forma rearranjada $-k = \frac{mg}{\Delta x}$ para processar os dados. Os autores observaram uma relação linear quase perfeita entre a massa aplicada e o deslocamento da mola (coeficiente de determinação $R^2 = 1$), reforçando a validade do modelo linear mesmo em ambiente virtual. Um dos achados mais notáveis do estudo — embora fisicamente controverso — foi a conclusão de que a constante elástica aumentava proporcionalmente à massa aplicada. Esse resultado pode ser interpretado como um efeito específico do ambiente de simulação, mas ainda assim oferece um ponto relevante para discussão.
+
+    Diferente do nosso projeto, o artigo limita-se à análise em malha aberta e não aborda técnicas de controle como PI ou PID, tampouco a aplicação da Transformada de Laplace. No entanto, sua contribuição é importante por demonstrar que ambientes virtuais podem ser utilizados de forma eficaz para validar modelos físicos antes da implementação em hardware. Ao complementar o trabalho de Sasidhar et al.~\cite{sasidhar2025}, que adotou uma abordagem experimental, o estudo de Noerafifah et al. justifica a utilização da simulação como uma etapa válida e reconhecida na literatura para o desenvolvimento de sistemas de controle baseados em massa-mola.
+
+    O estudo de Herho e Kaban~\cite{herho2025} representa um avanço significativo na análise quantitativa de sistemas massa-mola-amortecedor com controle de posição. O artigo realiza uma simulação comparativa entre as linguagens Python e R, focando tanto na modelagem matemática quanto na implementação computacional de controladores. A principal contribuição do trabalho é a aplicação de um controlador PID (Proporcional-Integral-Derivativo) em malha fechada, demonstrando desempenho de alto nível com erro de posição inferior a 0{,}4\%.
+
+    A modelagem do sistema parte da Segunda Lei de Newton, incorporando a força restauradora da mola ($F_s = -kx$) e a força de amortecimento ($F_d = -d\dot{x}$), resultando na equação diferencial de segunda ordem $m\ddot{x}(t) + d\dot{x}(t) + kx(t) = F(t)$. A transformação desse modelo para o domínio do espaço de estados permitiu análises de estabilidade mais robustas, como autovalores, critério de Routh-Hurwitz e estabilidade BIBO.
+
+    Além disso, o artigo fornece uma implementação detalhada da lei de controle PID, incluindo a ação integral via aumentação do vetor de estados. Os ganhos do controlador ($K_p=200$, $K_i=50$, $K_d=100$) foram ajustados com base em métodos clássicos como Ziegler-Nichols. Essa abordagem prática torna o estudo altamente relevante para o nosso projeto, especialmente para o desenvolvimento de controladores PI/PID. O uso de bibliotecas como \texttt{NumPy}, \texttt{SciPy} e \texttt{pandas} em Python reforça a escolha da nossa ferramenta de simulação e valida seu potencial para aplicações em sistemas de controle dinâmico.
+
+    Portanto, o trabalho de Herho et al. estabelece um modelo de referência para a nossa estratégia de controle, integrando modelagem avançada, simulação de alto desempenho e validação quantitativa. Ele complementa os estudos anteriores, que focaram em aspectos mais físicos ou em simulações simplificadas, ao oferecer uma abordagem holística e aplicada ao controle de sistemas reais.
+
+    Com base nos estudos analisados, observa-se uma complementaridade entre abordagens experimentais, simulações virtuais e implementações computacionais, que sustentam o desenvolvimento de sistemas massa-mola com controle de posição. Enquanto trabalhos como os de Sasidhar et al.~\cite{sasidhar2025} e Noerafifah et al.~\cite{noerafifah2025} reforçam a validade da modelagem física por meio da Lei de Hooke em diferentes contextos, o estudo de Herho e Kaban~\cite{herho2025} demonstra a aplicabilidade de estratégias de controle mais avançadas em ambiente de simulação. Dessa forma, a revisão bibliográfica oferece uma base sólida tanto para a construção do protótipo físico quanto para a escolha das ferramentas de modelagem e controle adotadas neste projeto.
+    
+\section{Materiais e Métodos}
+
+    \subsection{Descrição Física do Sistema}
+    O sistema massa-mola proposto neste projeto adota uma configuração vertical, desenvolvida com o objetivo de reduzir interferências causadas por atrito e vibrações laterais, comuns em arranjos horizontais. A estrutura física é composta por uma única massa móvel posicionada entre duas molas lineares: a mola superior está acoplada a uma haste metálica conectada a uma engrenagem acionada por um motor de corrente contínua (DC), enquanto a mola inferior está fixada à base da estrutura.
+
+    A atuação do motor gera uma rotação controlada da engrenagem, que, por sua vez, deforma a mola superior e provoca a movimentação vertical da massa. Essa movimentação ocorre ao longo de um eixo central delimitado por um cilindro plástico, que guia a massa e minimiza oscilações laterais sem contato direto com a superfície interna, eliminando o atrito mecânico indesejado.
+
+    A posição vertical da massa será monitorada por um sensor a laser instalado na base do sistema, permitindo a obtenção de dados de deslocamento em tempo real. O objetivo principal é implementar um controle de posição baseado em um controlador proporcional-integral (PI), ajustando a tensão fornecida ao motor para manter a massa na altura desejada com precisão.
+
+    Essa estrutura, construída do zero, foi inspirada conceitualmente no modelo de referência da Figura, porém adaptada para um formato simplificado e mais adequado à realidade do projeto. A nova abordagem facilita a montagem, reduz perdas por atrito e torna o sistema mais estável para fins de controle e medição.
+
+    \subsection{Componentes e Equipamentos Utilizados}
+    A Tabela apresenta os principais componentes utilizados no desenvolvimento do sistema massa-mola proposto, incluindo elementos mecânicos, atuadores, sensores e dispositivos auxiliares.
+
+    A seleção dos componentes considerou critérios de custo-benefício, disponibilidade no mercado nacional, compatibilidade com o sistema proposto e facilidade de integração com plataformas de controle como o Arduino.
+
+    A seguir, são descritos outros elementos essenciais do projeto, cuja obtenção será feita por reaproveitamento de materiais ou fabricação própria:
+    \begin{itemize}
+    \item \textbf{Corpo do sistema e estrutura base:} confeccionados em madeira, fornecendo suporte rígido e estável para os demais componentes.
+    
+    \item \textbf{Massa de teste:} componente central do sistema, posicionado entre as duas molas. Será fabricada por meio de impressão 3D, com dimensões ajustadas ao comportamento desejado.
+    
+    \item \textbf{Engrenagem e haste:} impressas em 3D e acopladas ao eixo do motor DC, são responsáveis pela conversão do movimento rotacional do motor em deformação na mola superior.
+    
+    \item \textbf{Cilindro plástico guia:} adaptado a partir de uma garrafa PET, atua como guia vertical para limitar vibrações laterais da massa, sem interferência por atrito.
+\end{itemize}
+
+    A metodologia adotada para o desenvolvimento do sistema foi fundamentada em três frentes principais discutidas na literatura. Primeiramente, a fabricação do protótipo físico segue a abordagem experimental proposta por Sasidhar et al.~\cite{sasidhar2025}, com a construção de uma estrutura vertical capaz de validar empiricamente os modelos teóricos. Em paralelo, o uso de sensores e controladores eletrônicos visa possibilitar a etapa de simulação e análise dinâmica do sistema, conforme ilustrado no estudo de Noerafifah et al.~\cite{noerafifah2025}, que demonstra a eficácia do uso de ambientes virtuais para testes prévios. Por fim, a estrutura de controle será baseada na estratégia proposta por Herho e Kaban~\cite{herho2025}, com inspiração direta na implementação de controladores PI/PID e na análise quantitativa da resposta do sistema. Essa fundamentação garante que o projeto esteja alinhado às boas práticas descritas na literatura científica recente.
+
+    \subsubsection*{Ambiente de Simulação e Controle}
+
+    Para a simulação do sistema massa-mola e implementação da estratégia de controle, será utilizado o ambiente MATLAB/Simulink. Essa ferramenta permite a modelagem matemática por meio de diagramas de blocos, análise da resposta dinâmica do sistema e sintonia de controladores como o PI proposto neste projeto. A escolha pelo MATLAB foi baseada em sua ampla aceitação acadêmica e na referência de trabalhos como o de Herho e Kaban~\cite{herho2025}, que validam o uso de ambientes computacionais para análise e projeto de sistemas de controle. Além disso, a integração futura com a plataforma Arduino será realizada por meio de bibliotecas compatíveis, permitindo a prototipagem em tempo real.
+
+\section{Cronograma de Execução}
+
+    O desenvolvimento do projeto teve início no mês de julho de 2025 e será conduzido até o final do semestre letivo, com término previsto para novembro. As atividades estão organizadas de forma sequencial, contemplando desde a fundamentação teórica até a construção, simulação e validação do sistema massa-mola com controle de posição.
+
+    Durante os meses de julho e agosto, foram realizadas as primeiras definições do projeto, incluindo o escopo do sistema, levantamento bibliográfico, descrição teórica e concepção inicial da solução física e de controle. Nesse período, também foram definidos os materiais a serem utilizados, bem como o ambiente de simulação adotado, o \textit{MATLAB/Simulink}.
+
+    Em setembro, está prevista a aquisição de componentes e a construção do protótipo físico. Isso envolve a montagem da estrutura de madeira, impressão 3D das peças mecânicas (massa de teste, engrenagem e haste), adaptação do cilindro guia e integração dos elementos eletrônicos (motor, sensor, driver, Arduino).
+
+    Simultaneamente, será desenvolvida a modelagem matemática do sistema e sua implementação no ambiente MATLAB/Simulink, visando a validação da dinâmica por meio da simulação. Essa etapa fornecerá suporte à futura aplicação do controlador PI.
+
+    Em outubro, serão realizados os testes experimentais com o sistema montado, bem como a calibração do sensor de posição e aplicação do controle PI. Os parâmetros do controlador serão ajustados com base na resposta do sistema, buscando estabilidade e precisão na posição final.
+
+    Por fim, no mês de novembro, ocorrerá a coleta e análise dos dados obtidos nos testes físicos e nas simulações. Esses resultados serão utilizados para validar o comportamento do sistema e concluir a redação do relatório final.
+
+
+\printbibliography
+
+%----------------------------------------------------------
+
+\end{document}
