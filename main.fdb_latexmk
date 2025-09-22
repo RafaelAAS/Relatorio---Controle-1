@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1758505410.24907 "main.bcf" "main.bbl" "main" 1758506085.22599 0
-  "main.bcf" 1758506084 109313 23824d4945b1e267ea21389a6cbcfd70 "pdflatex"
+["biber main"] 1758505410.24907 "main.bcf" "main.bbl" "main" 1758510422.11338 0
+  "main.bcf" 1758510421 109313 23824d4945b1e267ea21389a6cbcfd70 "pdflatex"
   "tau.bib" 1758514304 2079 487e2f405ccf801dde4f8da881a1faa9 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1758506082.06736 "c:/Code/LatexControle/main.tex" "main.pdf" "main" 1758506085.22669 0
+["pdflatex"] 1758510419.08166 "c:/Code/LatexControle/main.tex" "main.pdf" "main" 1758510422.1141 0
   "C:/Users/Rafael/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1758505408 86408 6eadc8f721fdc2cb71986669445abbd7 ""
   "C:/Users/Rafael/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1758505190 13257868 7d0c66973daf3f974aea4920563961c7 ""
   "C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -304,11 +304,11 @@
   "C:/Users/Rafael/AppData/Local/Programs/MiKTeX/tex/latex/xurl/xurl.sty" 1641733940 4675 e4b8c405820368c2dfb03526e16d725a ""
   "C:/Users/Rafael/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1750428951 2269 2de6c7a5fd634dfef00a960544463a38 ""
   "C:/Users/Rafael/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1750428951 20785 198a9cb2e04238d92c320d0d9edbd76a ""
-  "c:/Code/LatexControle/main.tex" 1758506081 21621 89a1931f323a9a0447d39ca22b85faa4 ""
-  "main.aux" 1758506084 4948 87427e7966463e79e8211f7e7a77e8f6 "pdflatex"
+  "c:/Code/LatexControle/main.tex" 1758510415 19206 6fea6eb616433c5b6f817324151776e1 ""
+  "main.aux" 1758510421 4652 3e8b0cb3b16ed2f5fa6ff8aa5102f9c8 "pdflatex"
   "main.bbl" 1758505454 7114 76defa548305201d9674b0405fa83a4f "biber main"
-  "main.run.xml" 1758506084 2398 c95872a99bafe59a258b77c766c0e592 "pdflatex"
-  "main.tex" 1758506081 21621 89a1931f323a9a0447d39ca22b85faa4 ""
+  "main.run.xml" 1758510421 2398 c95872a99bafe59a258b77c766c0e592 "pdflatex"
+  "main.tex" 1758510415 19206 6fea6eb616433c5b6f817324151776e1 ""
   "tau-class/tau.cls" 1758514304 15347 2202da1b2390f2f9216c3aeb1d47c153 ""
   "tau-class/taubabel.sty" 1758514304 2385 ca8e0d3023401e5a01eb3f164d752a08 ""
   "tau-class/tauenvs.sty" 1758514304 3183 d5bbfc779d2505e5da39eeff038cc6e0 ""
