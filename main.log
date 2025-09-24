@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.21)  22 SEP 2025 01:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.21)  24 SEP 2025 01:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Code/LatexControle/main.tex
-(c:/Code/LatexControle/main.tex
+**d:/Code/LatexControle/main.tex
+(d:/Code/LatexControle/main.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
 (tau-class/tau.cls
@@ -1631,21 +1631,45 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 9.49997pt on input line 86.
 
 
-
-LaTeX Warning: Empty bibliography on input line 167.
-
+<figures/Modelagemmassamola.jpeg, id=8, 1606.0pt x 1418.29875pt>
+File: figures/Modelagemmassamola.jpeg Graphic file (type jpg)
+<use figures/Modelagemmassamola.jpeg>
+Package pdftex.def Info: figures/Modelagemmassamola.jpeg  used on input line 173.
+(pdftex.def)             Requested size: 204.55118pt x 180.64133pt.
 
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.64998pt on input line 171.
+(Font)              scaled to size 6.64998pt on input line 189.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.64998pt on input line 171.
+(Font)              scaled to size 6.64998pt on input line 189.
 [1{C:/Users/Rafael/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-t1.enc}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}
 
 
-{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathit.enc}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathrm.enc}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathex.enc}] 
+{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathit.enc}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathrm.enc}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathex.enc}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathscr.enc} <./figures/Modelagemmassamola.jpeg>]
+<figures/RespostaDegrauGravidade.pdf, id=43, 390.45876pt x 245.91875pt>
+File: figures/RespostaDegrauGravidade.pdf Graphic file (type pdf)
+<use figures/RespostaDegrauGravidade.pdf>
+Package pdftex.def Info: figures/RespostaDegrauGravidade.pdf  used on input line 200.
+(pdftex.def)             Requested size: 191.76599pt x 120.77892pt.
+<figures/RespostaImpulsoGravidade.pdf, id=44, 390.45876pt x 245.91875pt>
+File: figures/RespostaImpulsoGravidade.pdf Graphic file (type pdf)
+<use figures/RespostaImpulsoGravidade.pdf>
+Package pdftex.def Info: figures/RespostaImpulsoGravidade.pdf  used on input line 207.
+(pdftex.def)             Requested size: 191.76599pt x 120.77892pt.
+
+
+
+LaTeX Warning: Empty bibliography on input line 227.
+
+
+
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 231.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 6.64998pt on input line 231.
+[2 <./figures/RespostaDegrauGravidade.pdf> <./figures/RespostaImpulsoGravidade.pdf>] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
-Package pbalance Info: No two-column pages, doing nothing on input line 171.
+Package pbalance Info: No two-column pages, doing nothing on input line 231.
 
 Package pbalance Warning: Patching failed, cannot balance; try 
 (pbalance)                loading pbalance earlier or later.
@@ -1655,31 +1679,22 @@ Package pbalance Warning: Patching failed, cannot balance; try
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47465 strings out of 468132
- 903283 string characters out of 5430207
- 1845357 words of memory out of 5000000
- 75122 multiletter control sequences out of 15000+600000
- 777859 words of font info for 249 fonts, out of 8000000 for 9000
+ 47571 strings out of 468132
+ 905346 string characters out of 5430207
+ 1843187 words of memory out of 5000000
+ 75182 multiletter control sequences out of 15000+600000
+ 790145 words of font info for 269 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 137i,11n,143p,1023b,1599s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Math.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Italic.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Regular.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtti10.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (1 page, 562328 bytes).
+ 137i,12n,143p,1023b,1612s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Math.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Bold.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Italic.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Regular.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtti10.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on main.pdf (2 pages, 865036 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
- 12 named destinations out of 1000 (max. 500000)
- 62005 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 172 PDF objects out of 1000 (max. 8388607)
+ 24 named destinations out of 1000 (max. 500000)
+ 68188 words of extra memory for PDF output out of 74296 (max. 10000000)
 
