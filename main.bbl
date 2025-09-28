@@ -16,5 +16,106 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{ynt/global//global/global/global}
+    \entry{PassiveGravity}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=89e55aa3282135f30fdac656b54192a7}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Qi},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=846062d273ef5816a6ace1309d2a95b8}{%
+           family={Ortega},
+           familyi={O\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d891d71959c065793434b27a8dd1d0e8}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Ou},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{13464ba4bfb2a7f2c049a9e3f44e7fb0}
+      \strng{fullhash}{0c53da8ee9912ffe37630e564e872da1}
+      \strng{fullhashraw}{0c53da8ee9912ffe37630e564e872da1}
+      \strng{bibnamehash}{0c53da8ee9912ffe37630e564e872da1}
+      \strng{authorbibnamehash}{0c53da8ee9912ffe37630e564e872da1}
+      \strng{authornamehash}{13464ba4bfb2a7f2c049a9e3f44e7fb0}
+      \strng{authorfullhash}{0c53da8ee9912ffe37630e564e872da1}
+      \strng{authorfullhashraw}{0c53da8ee9912ffe37630e564e872da1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Passive Gravity Compensation Mechanisms: Technologies and Applications}
+      \field{year}{2011}
+    \endentry
+    \entry{ComparativeStudy}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=e0a76fa65940343222259c1792a56656}{%
+           family={Fitri},
+           familyi={F\bibinitperiod},
+           given={Mohd},
+           giveni={M\bibinitperiod}}}%
+        {{hash=82e7eb2862b154b939fe3f9961f677cc}{%
+           family={Yakub},
+           familyi={Y\bibinitperiod},
+           given={Mohd},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a3bbeeeb42ff849e4be8e6a635ce10fd}{%
+           family={B.A.Aminudin},
+           familyi={B\bibinitperiod},
+           given={Abdul\bibnamedelima Qadir},
+           giveni={A\bibinitperiod\bibinitdelim Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{62611d9dffcfdd0421a4598ef495304b}
+      \strng{fullhash}{0b5604493a42f55c7fc15359f0e475ed}
+      \strng{fullhashraw}{0b5604493a42f55c7fc15359f0e475ed}
+      \strng{bibnamehash}{0b5604493a42f55c7fc15359f0e475ed}
+      \strng{authorbibnamehash}{0b5604493a42f55c7fc15359f0e475ed}
+      \strng{authornamehash}{62611d9dffcfdd0421a4598ef495304b}
+      \strng{authorfullhash}{0b5604493a42f55c7fc15359f0e475ed}
+      \strng{authorfullhashraw}{0b5604493a42f55c7fc15359f0e475ed}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2088-5334}
+      \field{journaltitle}{International Journal on Advanced Science Engineering Information Technolgy}
+      \field{number}{3}
+      \field{title}{Comparative Study on Control Method for Two-Mass Systems}
+      \field{volume}{2}
+      \field{year}{2012}
+      \field{pages}{63\bibrangedash 68}
+      \range{pages}{6}
+    \endentry
+    \entry{SistemaMassaMola}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=f9ead6459152f5a179845c17f0c16165}{%
+           family={Silveira},
+           familyi={S\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{f9ead6459152f5a179845c17f0c16165}
+      \strng{fullhash}{f9ead6459152f5a179845c17f0c16165}
+      \strng{fullhashraw}{f9ead6459152f5a179845c17f0c16165}
+      \strng{bibnamehash}{f9ead6459152f5a179845c17f0c16165}
+      \strng{authorbibnamehash}{f9ead6459152f5a179845c17f0c16165}
+      \strng{authornamehash}{f9ead6459152f5a179845c17f0c16165}
+      \strng{authorfullhash}{f9ead6459152f5a179845c17f0c16165}
+      \strng{authorfullhashraw}{f9ead6459152f5a179845c17f0c16165}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Vibra Varejo}
+      \field{title}{Sistema massa-mola: 5 Curiosidades que Você Precisa Saber}
+      \field{year}{2025}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
