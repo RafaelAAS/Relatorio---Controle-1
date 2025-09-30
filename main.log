@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.28)  28 SEP 2025 16:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.28)  30 SEP 2025 20:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1638,41 +1638,46 @@ Package lettrine.sty Info: Targeted height = 15.846pt
 
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.64998pt on input line 117.
+(Font)              scaled to size 6.64998pt on input line 116.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.64998pt on input line 117.
+(Font)              scaled to size 6.64998pt on input line 116.
 [1{C:/Users/Rafael/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-t1.enc}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}
 
 
 {C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathit.enc}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathrm.enc}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathex.enc}]
+<figures/DiagramaFT.jpg, id=34, 562.1pt x 161.60374pt>
+File: figures/DiagramaFT.jpg Graphic file (type jpg)
+<use figures/DiagramaFT.jpg>
+Package pdftex.def Info: figures/DiagramaFT.jpg  used on input line 197.
+(pdftex.def)             Requested size: 204.55118pt x 58.80856pt.
 
-<figures/Modelagemmassamola.jpeg, id=34, 1606.0pt x 1418.29875pt>
-File: figures/Modelagemmassamola.jpeg Graphic file (type jpg)
-<use figures/Modelagemmassamola.jpeg>
-Package pdftex.def Info: figures/Modelagemmassamola.jpeg  used on input line 205.
-(pdftex.def)             Requested size: 204.55118pt x 180.64133pt.
-<figures/RespostaDegrauGravidade.pdf, id=35, 390.45876pt x 245.91875pt>
-File: figures/RespostaDegrauGravidade.pdf Graphic file (type pdf)
-<use figures/RespostaDegrauGravidade.pdf>
-Package pdftex.def Info: figures/RespostaDegrauGravidade.pdf  used on input line 232.
-(pdftex.def)             Requested size: 191.76599pt x 120.77892pt.
 
-Underfull \vbox (badness 3646) has occurred while \output is active []
-
+<figures/DiagramaForca.jpg, id=35, 563.10374pt x 586.19pt>
+File: figures/DiagramaForca.jpg Graphic file (type jpg)
+<use figures/DiagramaForca.jpg>
+Package pdftex.def Info: figures/DiagramaForca.jpg  used on input line 208.
+(pdftex.def)             Requested size: 204.55118pt x 212.93343pt.
 
 
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 236.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 231.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 6.64998pt on input line 236.
-[2{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathscr.enc} <./figures/Modelagemmassamola.jpeg>]
-<figures/RespostaImpulsoGravidade.pdf, id=58, 390.45876pt x 245.91875pt>
+(Font)              scaled to size 6.64998pt on input line 231.
+[2{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathscr.enc} <./figures/DiagramaFT.jpg> <./figures/DiagramaForca.jpg>]
+<figures/RespostaDegrauGravidade.pdf, id=59, 390.45876pt x 245.91875pt>
+File: figures/RespostaDegrauGravidade.pdf Graphic file (type pdf)
+<use figures/RespostaDegrauGravidade.pdf>
+Package pdftex.def Info: figures/RespostaDegrauGravidade.pdf  used on input line 235.
+(pdftex.def)             Requested size: 191.76599pt x 120.77892pt.
+<figures/RespostaImpulsoGravidade.pdf, id=60, 390.45876pt x 245.91875pt>
 File: figures/RespostaImpulsoGravidade.pdf Graphic file (type pdf)
 <use figures/RespostaImpulsoGravidade.pdf>
-Package pdftex.def Info: figures/RespostaImpulsoGravidade.pdf  used on input line 239.
+Package pdftex.def Info: figures/RespostaImpulsoGravidade.pdf  used on input line 242.
 (pdftex.def)             Requested size: 191.76599pt x 120.77892pt.
-LaTeX Font Info:    Trying to load font information for TS1+stix2 on input line 259.
- (C:\Users\Rafael\AppData\Local\Programs\MiKTeX\tex/fonts/stix2-type1\ts1stix2.fd
+
+
+LaTeX Font Info:    Trying to load font information for TS1+stix2 on input line 262.
+(C:\Users\Rafael\AppData\Local\Programs\MiKTeX\tex/fonts/stix2-type1\ts1stix2.fd
 File: ts1stix2.fd 2018/04/02 v2.0.0-latex stix2 TS1 font definitions
 )
 Package microtype Info: Character `textflorin ' is missing
@@ -1680,11 +1685,9 @@ Package microtype Info: Character `textflorin ' is missing
 (microtype)             Ignoring protrusion settings for this character.
 
 
-
-
 [3{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-ts1.enc}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-t1sc.enc} <./figures/RespostaDegrauGravidade.pdf> <./figures/RespostaImpulsoGravidade.pdf>] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
-Package pbalance Info: No two-column pages, doing nothing on input line 263.
+Package pbalance Info: No two-column pages, doing nothing on input line 266.
 
 Package pbalance Warning: Patching failed, cannot balance; try 
 (pbalance)                loading pbalance earlier or later.
@@ -1699,17 +1702,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47894 strings out of 468129
- 911924 string characters out of 5430128
- 1845247 words of memory out of 5000000
- 75447 multiletter control sequences out of 15000+600000
- 829537 words of font info for 298 fonts, out of 8000000 for 9000
+ 47908 strings out of 468129
+ 912189 string characters out of 5430128
+ 1844349 words of memory out of 5000000
+ 75458 multiletter control sequences out of 15000+600000
+ 829694 words of font info for 299 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 137i,12n,143p,1038b,1612s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 137i,13n,143p,1038b,1612s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Math.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Bold.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Italic.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Regular.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtti10.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (3 pages, 883601 bytes).
+Output written on main.pdf (3 pages, 811338 bytes).
 PDF statistics:
- 204 PDF objects out of 1000 (max. 8388607)
- 31 named destinations out of 1000 (max. 500000)
- 80500 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 206 PDF objects out of 1000 (max. 8388607)
+ 32 named destinations out of 1000 (max. 500000)
+ 80505 words of extra memory for PDF output out of 89155 (max. 10000000)
 
