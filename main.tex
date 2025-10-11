@@ -61,9 +61,7 @@
 
 \begin{abstract}    
     O projeto tem como objetivo o estudo e implementação de um sistema de controle de posição em uma configuração massa-mola com duas massas acopladas por molas, representando situações práticas de sistemas com ligação elástica entre atuador e carga.
-   
     O problema central consiste em manter a posição controlada da massa de saída, mesmo diante das oscilações e acoplamentos internos do sistema. Para isso, pretende-se desenvolver um modelo matemático e realizar simulações computacionais.
-
     O foco é a obtenção do modelo matemático que descreve a dinâmica do sistema e sua simulação em malha aberta, servindo de base para o projeto e implementação do controlador de posição.
 \end{abstract}
 
@@ -109,7 +107,7 @@ O sistema massa-mola é um modelo físico fundamental que descreve a interação
 
 Em muitas aplicações industriais, como máquinas-ferramenta, braços robóticos flexíveis e laminadores de aço, a simplificação do modelo para uma única massa é inadequada, levando a um desempenho de controle insatisfatório. Isso ocorre especialmente quando atuadores e cargas são conectados por acoplamentos flexíveis ou eixos longos com baixa rigidez. Nesses casos, a elasticidade do acoplamento gera um efeito vibratório que pode reduzir a precisão do posicionamento e introduzir instabilidade na resposta do sistema. O atrito nos componentes mecânicos também agrava o problema, podendo causar erros de estado estacionário e de rastreamento. Por essa razão, a modelagem como um sistema de duas massas é essencial para uma análise e controle precisos. \cite{ComparativeStudy}
 
-No caso de sistemas com orientação vertical, como o proposto neste trabalho, a força da gravidade introduz uma consideração adicional. Uma abordagem para lidar com o efeito da gravidade é a compensação passiva, que utilia dispositivos não energizados, como molas, para anular as forças gravitacionais. Uma técnica eficaz para projetar tais sistemas é a abordagem energética, que busca manter a energia potencial total (gravitacional + elástica) do sistema constante em qualquer configuração. A condição para este balanço estático pode ser expressa pela equação $V_{TOTAL} = \sum m_i g^T p_i + \frac{1}{2} \sum k_j x^2_j = V_0$, onde a energia potencial total se mantém constante. Em comparação com métodos baseados em contrapesos, a compensação por molas introduz consideravelmente menos inércia adicional ao sistema, tornando-se preferível para aplicações que envolvem movimentos dinâmicos. \cite{PassiveGravity}
+No caso de sistemas com orientação vertical, como o proposto neste trabalho, a força da gravidade introduz uma consideração adicional. Uma abordagem para lidar com o efeito da gravidade é a compensação passiva, que utiliza dispositivos não energizados, como molas, para anular as forças gravitacionais. Uma técnica eficaz para projetar tais sistemas é a abordagem energética, que busca manter a energia potencial total (gravitacional + elástica) do sistema constante em qualquer configuração. A condição para este balanço estático pode ser expressa pela equação $V_{TOTAL} = \sum m_i g^T p_i + \frac{1}{2} \sum k_j x^2_j = V_0$, onde a energia potencial total se mantém constante. Em comparação com métodos baseados em contrapesos, a compensação por molas introduz consideravelmente menos inércia adicional ao sistema, tornando-se preferível para aplicações que envolvem movimentos dinâmicos. \cite{PassiveGravity}
 
 Portanto, a literatura valida a abordagem adotada neste projeto: a modelagem de um sistema de duas massas para representar fielmente a dinâmica de um sistema com acoplamento elástico, e a análise de uma configuração vertical onde a gravidade estabelece o ponto de equilíbrio estático, mas não altera a dinâmica do movimento oscilatório em torno deste ponto. Esta revisão fornece a base teórica para a modelagem matemática, análise e simulação computacional que serão apresentadas nas seções seguintes.
 
@@ -123,17 +121,17 @@ Aplicando a Segunda Lei de Newton para cada massa, definindo o deslocamento a pa
 
 Para a Massa 1 ($M_1$):
 
-A força resultante em $M_1$ é a soma da força da mola $K_1$, da força da mola $K_2$, da força de atrito em $M_1$ e da força externa y(t).
+A força resultante em $M_1$ é a soma da força da mola $K_1$, da força da mola $K_2$, da força de atrito em $M_1$ e da força externa f(t).
 
 \begin{equation}
-    \sum F_{M_1} = -K_1 x_1(t) - b_1 \dot x_1(t) + K_2(x_2(t) - x_1(t)) + y(t) = M_1 \ddot{x}_1(t)
+    \sum F_{M_1} = -K_1 x_1(t) - b_1 \dot x_1(t) + K_2(x_2(t) - x_1(t)) + f(t) = M_1 \ddot{x}_1(t)
 \label{eq:SomaM1}
 \end{equation}
 
 Reorganizando a equação, temos:
 
 \begin{equation}
-    M_1 \ddot{x}_1(t) + b_1 \dot x_1(t) + (K_1 + K_2) x_1(t) - K_2x_2(t) = y(t)
+    M_1 \ddot{x}_1(t) + b_1 \dot x_1(t) + (K_1 + K_2) x_1(t) - K_2x_2(t) = f(t)
 \label{eq:Reorg}
 \end{equation}
 
@@ -155,12 +153,12 @@ Reorganizando a equação, temos:
 
 \subsection{Obtenção da Função de Transferência}
 
-Para encontrar a função de transferência G(s) = $\frac{X_2(s)}{Y(s)}$, aplicamos a Transformada de Laplace nas EDOs, assumindo condições iniciais nulas:
+Para encontrar a função de transferência G(s) = $\frac{X_2(s)}{F(s)}$, aplicamos a Transformada de Laplace nas EDOs, assumindo condições iniciais nulas:
 
 Para a EDO da Massa 1:
 
 \begin{equation}
-    (M_1s^2 + b_1s + K_1 + K_2)X_1(s) - K_2X_2(s) = Y(s)
+    (M_1s^2 + b_1s + K_1 + K_2)X_1(s) - K_2X_2(s) = F(s)
     \label{eq:EDOM1}
 \end{equation}
 
@@ -181,16 +179,29 @@ Da equação [\ref{eq:EDOM2}], podemos isolar $X_1$(s):
 Agora, substituimos está expressão para $X_1(s)$ na equação [\ref{eq:EDOM1}]:
 
 \begin{equation}
-    (M_1s^2 + b1s + K_1 + K_2)\left[\frac{(M_2s^2 + b_2s + K_2)}{K_2}X_2(s)\right] - K_2X_2(s) = Y(s)
+    (M_1s^2 + b1s + K_1 + K_2)\left[\frac{(M_2s^2 + b_2s + K_2)}{K_2}X_2(s)\right] - K_2X_2(s) = F(s)
     \label{eq:substX1}
 \end{equation}
 
 Fatorando $X_2(s)$ e reorganizando os termos, encontramos a função de transferência final:
 
 \begin{equation}
-    G(s) = \frac{X_2 (s)}{Y(s)} = \frac{K_2}{(M_1 s^2 + b_1 s + K_1 + K_2)(M_2 s^2 + b_2 s + K_2) - K_2 ^2}
+    G(s) = \frac{X_2 (s)}{F(s)} = \frac{K_2}{(M_1 s^2 + b_1 s + K_1 + K_2)(M_2 s^2 + b_2 s + K_2) - K_2 ^2}
 \label{eq: FT}
 \end{equation}
+
+\begin{equation}
+    G(s) = \frac{N(s)}{D(s)}
+    \label{eq: FTresum}
+\end{equation}
+
+onde o numerador é $N(s) = \frac{K_2}{M_1M_2}$ e o denominador $D(s)$ é um polinômio de quarta ordem $D(s) = s^4 + a_3s^3 + a_2s^2 + a_1s + a_0$, cujos coeficientes são:
+\begin{align}
+    a_3 &= \frac{b_2}{M_2} + \frac{b_1}{M_1} \\
+    a_2 &= \frac{K_2}{M_2} + \frac{K_1}{M_1} + \frac{b_1b_2K_2}{M_1^2M_2} \\
+    a_1 &= \frac{b_1K_2 + K_1b_2 + K_2b_2}{M_1M_2} \\
+    a_0 &= \frac{K_1K_2}{M_1M_2}
+\end{align}
 
 \begin{figure}[H]
     \centering
@@ -210,19 +221,38 @@ Para a configuração vertical, a força de gravidade ($F_G = M \cdot g$) atua c
     \label{fig:MSM}
 \end{figure}
 
-%Criar um diagrama de blocos simples com uma entrada Y(s), um bloco contendo G(s) e uma saída X2(s)
+%Criar um diagrama de blocos simples com uma entrada F(s), um bloco contendo G(s) e uma saída X2(s)
 
 \section{Análise do Modelo}
 
-A estabilidade do sistema em malha aberta é determinada pelos polos da função de transferência, que são as raizes do polinômio característico do denominador:
+\subsection{Característica da Função de Transferência}
+A função de transferência G(s), apresentada na Equação \ref{eq: FTresum}, descreve as principais características dinâmicas do sistema. Primeiramente, observa-se que o modelo apresenta um sistema de quarta ordem, determinado pelo maior expoente da varíavel \textit{s} no polinômio do denominador, D(s).
+
+Em relação à classificação, o sistema é de Tipo 0, pois não possui polos na origem (s = 0). Isso pode ser verificado pelo fato de o coeficiente de ordem zero do denominador, $a_0 = \frac{K_1K_2}{M_1M_2}$, ser diferente de zero para valores físicos não nulos dos parâmetros.
+
+Outra característica fundamental é o Ganho Estático, que representa a resposta do sistema em regime estacionário a uma entrada constante. Ele é calculado fazendo $s = 0$ na função de transferência:
+
 \begin{equation}
-    \Delta (s) = (M_1s^2 + b_1s + K_1 + K_2)(M_2s^2 + b_2s + K_2) - K_2^2 = 0
+    G(0) = \frac{N(0)}{D(0)} = \frac{\frac{K_2}{M_1M_2}}{\frac{K_1K_2}{M_1M_2}} = \frac{K_2}{K_1K_2} = \frac{1}{K_1}
+    \label{GE}
+\end{equation}
+
+Este resultado indica que, para uma força de entrada do tupo degrau unitário (1N), o deslocamento da Massa 2 em regime estacionário será de $\frac{1}{K_1}$ metros. Com o valor de $K_1 = 100 N/m$ utilizado na simulação, o ganho estático é $1/100 = 0.01$, o que confirma precisamente o valor de regime de $0.01 m$ observando no gráfico da resposta ao degrau \ref{fig:RDG}.
+
+Finalmente, a função de transferência possui quatro polos e nenhum zero finito (pois numerador é uma constante). A localização exata dos polos depende dos parâmetros físicos, mas como discutido a seguir, a presença do atrito garante que eles estarão no semiplano esquerdo, resultando em um sistema estável.
+
+\subsection{Análise de Estabilidade}
+
+A estabilidade do sistema em malha aberta é determinada pelos polos da função de transferência, que são as raízes do polinômio característico do denominador:
+
+\begin{equation}
+    \Delta (s) = D(s) = s^4 + a_3s^3 + a_2s^2 + a_1s + a_0 = 0
 \label{eq:raizes}
 \end{equation}
 
 Como o polinômio característico agora é um polinômio de quarta ordem completo, com termos de todas as potências de s. Consequentemente, para quaisquer valores físicos positivos dos parâmetros (M, b, K), os polos da função de transferência possuirão parte real negativa, deslocando-se do eixo imaginário para o semiplano esquerdo do plano s.
 
-Isso garante que o sistema em malha aberta seja estável. O comportamento dinâmico esperado para uma entrada degrau é, portanto, uma resposta oscilátoria amortecida, na qual o deslocamento da massa converge para um valor de regime estacionário após um período transitório. A localização exata dos polos e, por conseguinte, as características da resposta transitória -- como a frequência de oscilação amortecida e o tempo de acomodação -- dependem dos valores numéricos de todos os parâmetros físicos do sistema ($M_1, M_2, b_1, b_2, K_1, K_2$).
+Isso garante que o sistema em malha aberta seja estável. O comportamento dinâmico esperado para uma entrada degrau é, portanto, uma resposta oscilatória amortecida, na qual o deslocamento da massa converge para um valor de regime estacionário após um período transitório. A localização exata dos polos e, por conseguinte, as características da resposta transitória -- como a frequência de oscilação amortecida e o tempo de acomodação -- dependem dos valores numéricos de todos os parâmetros físicos do sistema ($M_1, M_2, b_1, b_2, K_1, K_2$).
 
 \section{Simulação Computacional}
 
@@ -255,7 +285,7 @@ De forma análoga, a resposta ao impulso (Figura \ref{fig:RIG}) mostra o sistema
 
  A presente etapa do projeto culminou no desenvolvimento e simulação de um modelo matemático para o sistema de duas massas com acoplamento flexível. Foi obtida uma função de transferência que incorpora os parâmetros físicos do sistema, incluindo as massas, constantes elásticas e coeficientes de atrito, prevendo corretamente a natureza estável e de oscilação amortecida do sistema. A simulação computacional validou este comportamento dinâmico, fornecendo uma base sólida para a continuidade do projeto.
 
- O modelo agora verificado servirá como referência para a próxima etapa, que consistirá na montagem do protótipo fisíco e na sua validação experimental. O objetivo será determinar os parâmetros reais do sistema construído e comparar sua resposta a um sinal de entrada com os resultados simulados.
+ O modelo agora verificado servirá como referência para a próxima etapa, que consistirá na montagem do protótipo físico e na sua validação experimental. O objetivo será determinar os parâmetros reais do sistema construído e comparar sua resposta a um sinal de entrada com os resultados simulados.
 
 
 

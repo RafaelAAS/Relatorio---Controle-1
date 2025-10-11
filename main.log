@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.28)  30 SEP 2025 20:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.28)  11 OCT 2025 18:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1396,7 +1396,7 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'portuguese'.
-LaTeX Font Info:    Trying to load font information for T1+stix2 on input line 76.
+LaTeX Font Info:    Trying to load font information for T1+stix2 on input line 74.
  (C:\Users\Rafael\AppData\Local\Programs\MiKTeX\tex/fonts/stix2-type1\t1stix2.fd
 File: t1stix2.fd 2018/04/02 v2.0.0-latex stix2 T1 font definitions
 ) (main.aux
@@ -1405,36 +1405,36 @@ Package babel Info: 'portuguese' activates 'portuges' shorthands.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for LS1/stix2/m/n on input line 76.
-LaTeX Font Info:    Trying to load font information for LS1+stix2 on input line 76.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for LS1/stix2/m/n on input line 74.
+LaTeX Font Info:    Trying to load font information for LS1+stix2 on input line 74.
  (C:\Users\Rafael\AppData\Local\Programs\MiKTeX\tex/fonts/stix2-type1\ls1stix2.fd
 File: ls1stix2.fd 2018/04/02 v2.0.0-latex stix2 LS1 font definitions
 )
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for LS2/stix2/m/n on input line 76.
-LaTeX Font Info:    Trying to load font information for LS2+stix2 on input line 76.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for LS2/stix2/m/n on input line 74.
+LaTeX Font Info:    Trying to load font information for LS2+stix2 on input line 74.
  (C:\Users\Rafael\AppData\Local\Programs\MiKTeX\tex/fonts/stix2-type1\ls2stix2.fd
 File: ls2stix2.fd 2018/04/02 v2.0.0-latex stix2 LS2 font definitions
 )
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
  (C:\Users\Rafael\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count534
@@ -1502,9 +1502,9 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Command `\dddot' is already robust on input line 76.
-LaTeX Info: Command `\ddddot' is already robust on input line 76.
-Package hyperref Info: Link coloring ON on input line 76.
+LaTeX Info: Command `\dddot' is already robust on input line 74.
+LaTeX Info: Command `\ddddot' is already robust on input line 74.
+Package hyperref Info: Link coloring ON on input line 74.
 Package biblatex Info: Trying to load language 'portuguese'...
 Package biblatex Info: ... file 'portuguese.lbx' found.
 (C:\Users\Rafael\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\portuguese.lbx
@@ -1518,18 +1518,18 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (main.bbl)
-Package biblatex Info: Reference section=0 on input line 76.
-Package biblatex Info: Reference segment=0 on input line 76.
+Package biblatex Info: Reference section=0 on input line 74.
+Package biblatex Info: Reference segment=0 on input line 74.
 Package microtype Info: Patching varwidth to enable character protrusion.
 \MT@vwid@leftmargin=\dimen379
 \MT@vwid@rightmargin=\dimen380
-LaTeX Info: Redefining \microtypecontext on input line 76.
-Package microtype Info: Applying patch `item' on input line 76.
-Package microtype Info: Applying patch `toc' on input line 76.
-Package microtype Info: Applying patch `eqnum' on input line 76.
-Package microtype Info: Applying patch `footnote' on input line 76.
-Package microtype Info: Applying patch `verbatim' on input line 76.
-LaTeX Info: Redefining \microtypesetup on input line 76.
+LaTeX Info: Redefining \microtypecontext on input line 74.
+Package microtype Info: Applying patch `item' on input line 74.
+Package microtype Info: Applying patch `toc' on input line 74.
+Package microtype Info: Applying patch `eqnum' on input line 74.
+Package microtype Info: Applying patch `footnote' on input line 74.
+Package microtype Info: Applying patch `verbatim' on input line 74.
+LaTeX Info: Redefining \microtypesetup on input line 74.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1543,64 +1543,64 @@ Package microtype Info: No adjustment of character kerning.
  (C:\Users\Rafael\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 78.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 76.
  (C:\Users\Rafael\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.54997pt on input line 78.
+(Font)              scaled to size 8.54997pt on input line 76.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.54997pt on input line 78.
+(Font)              scaled to size 8.54997pt on input line 76.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 17.09995pt on input line 78.
-LaTeX Font Info:    Trying to load font information for LS1+stix2scr on input line 78.
+(Font)              scaled to size 17.09995pt on input line 76.
+LaTeX Font Info:    Trying to load font information for LS1+stix2scr on input line 76.
  (C:\Users\Rafael\AppData\Local\Programs\MiKTeX\tex/fonts/stix2-type1\ls1stix2scr.fd
 File: ls1stix2scr.fd 2018/04/02 v2.0.0-latex stix2 script LS1 font definitions
 )
-LaTeX Font Info:    Trying to load font information for LS2+stix2ex on input line 78.
+LaTeX Font Info:    Trying to load font information for LS2+stix2ex on input line 76.
  (C:\Users\Rafael\AppData\Local\Programs\MiKTeX\tex/fonts/stix2-type1\ls2stix2ex.fd
 File: ls2stix2ex.fd 2018/04/02 v2.0.0-latex stix2 extentions LS2 font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 78.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 76.
  (C:\Users\Rafael\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (C:\Users\Rafael\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 78.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 76.
  (C:\Users\Rafael\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (C:\Users\Rafael\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for LS1+stix2frak on input line 78.
+LaTeX Font Info:    Trying to load font information for LS1+stix2frak on input line 76.
  (C:\Users\Rafael\AppData\Local\Programs\MiKTeX\tex/fonts/stix2-type1\ls1stix2frak.fd
 File: ls1stix2frak.fd 2018/04/02 v2.0.0-latex stix2 fraktur LS1 font definitions
 )
-LaTeX Font Info:    Trying to load font information for LS1+stix2bb on input line 78.
+LaTeX Font Info:    Trying to load font information for LS1+stix2bb on input line 76.
  (C:\Users\Rafael\AppData\Local\Programs\MiKTeX\tex/fonts/stix2-type1\ls1stix2bb.fd
 File: ls1stix2bb.fd 2018/04/02 v2.0.0-latex stix2 blackboard LS1 font definitions
 )
-LaTeX Font Info:    Trying to load font information for LS2+stix2cal on input line 78.
+LaTeX Font Info:    Trying to load font information for LS2+stix2cal on input line 76.
  (C:\Users\Rafael\AppData\Local\Programs\MiKTeX\tex/fonts/stix2-type1\ls2stix2cal.fd
 File: ls2stix2cal.fd 2018/04/02 v2.0.0-latex stix2 calligraphic LS2 font definitions
 )
-LaTeX Font Info:    Trying to load font information for LS1+stix2sf on input line 78.
+LaTeX Font Info:    Trying to load font information for LS1+stix2sf on input line 76.
  (C:\Users\Rafael\AppData\Local\Programs\MiKTeX\tex/fonts/stix2-type1\ls1stix2sf.fd
 File: ls1stix2sf.fd 2018/04/02 v2.0.0-latex stix2 sans-serif LS1 font definitions
 )
-LaTeX Font Info:    Trying to load font information for LS2+stix2tt on input line 78.
+LaTeX Font Info:    Trying to load font information for LS2+stix2tt on input line 76.
  (C:\Users\Rafael\AppData\Local\Programs\MiKTeX\tex/fonts/stix2-type1\ls2stix2tt.fd
 File: ls2stix2tt.fd 2018/04/02 v2.0.0-latex stix2 typewriter LS2 font definitions
 )
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 5.69998pt on input line 78.
-LaTeX Font Info:    Calculating math sizes for size <7.5> on input line 78.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 78.
+(Font)              scaled to size 5.69998pt on input line 76.
+LaTeX Font Info:    Calculating math sizes for size <7.5> on input line 76.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 76.
  (C:\Users\Rafael\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1609,74 +1609,73 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.59998pt on input line 80.
+(Font)              scaled to size 7.59998pt on input line 78.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 7.59998pt on input line 80.
+(Font)              scaled to size 7.59998pt on input line 78.
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--80
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 80.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 78.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.54997pt on input line 80.
+(Font)              scaled to size 8.54997pt on input line 78.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 80.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 78.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 7.59998pt on input line 80.
+(Font)              scaled to size 7.59998pt on input line 78.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 86.
+(Font)              scaled to size 9.49997pt on input line 84.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 9.49997pt on input line 86.
+(Font)              scaled to size 9.49997pt on input line 84.
 Package lettrine.sty Info: Targeted height = 15.846pt
 (lettrine.sty)             (for loversize=0, accent excluded),
 (lettrine.sty)             Lettrine height = 17.693pt ({\color {taucolor}\bfseries \fontsize {26pt}{28pt}\selectfont {O}});
-(lettrine.sty)             reported on input line 88.
+(lettrine.sty)             reported on input line 86.
 
 
 
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.64998pt on input line 116.
+(Font)              scaled to size 6.64998pt on input line 114.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.64998pt on input line 116.
+(Font)              scaled to size 6.64998pt on input line 114.
 [1{C:/Users/Rafael/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-t1.enc}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}
 
 
 {C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathit.enc}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathrm.enc}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathex.enc}]
+
 <figures/DiagramaFT.jpg, id=34, 562.1pt x 161.60374pt>
 File: figures/DiagramaFT.jpg Graphic file (type jpg)
 <use figures/DiagramaFT.jpg>
-Package pdftex.def Info: figures/DiagramaFT.jpg  used on input line 197.
+Package pdftex.def Info: figures/DiagramaFT.jpg  used on input line 208.
 (pdftex.def)             Requested size: 204.55118pt x 58.80856pt.
-
-
 <figures/DiagramaForca.jpg, id=35, 563.10374pt x 586.19pt>
 File: figures/DiagramaForca.jpg Graphic file (type jpg)
 <use figures/DiagramaForca.jpg>
-Package pdftex.def Info: figures/DiagramaForca.jpg  used on input line 208.
+Package pdftex.def Info: figures/DiagramaForca.jpg  used on input line 219.
 (pdftex.def)             Requested size: 204.55118pt x 212.93343pt.
 
 
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 231.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 234.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 6.64998pt on input line 231.
+(Font)              scaled to size 6.64998pt on input line 234.
 [2{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathscr.enc} <./figures/DiagramaFT.jpg> <./figures/DiagramaForca.jpg>]
-<figures/RespostaDegrauGravidade.pdf, id=59, 390.45876pt x 245.91875pt>
+<figures/RespostaDegrauGravidade.pdf, id=65, 390.45876pt x 245.91875pt>
 File: figures/RespostaDegrauGravidade.pdf Graphic file (type pdf)
 <use figures/RespostaDegrauGravidade.pdf>
-Package pdftex.def Info: figures/RespostaDegrauGravidade.pdf  used on input line 235.
+Package pdftex.def Info: figures/RespostaDegrauGravidade.pdf  used on input line 265.
 (pdftex.def)             Requested size: 191.76599pt x 120.77892pt.
-<figures/RespostaImpulsoGravidade.pdf, id=60, 390.45876pt x 245.91875pt>
+<figures/RespostaImpulsoGravidade.pdf, id=66, 390.45876pt x 245.91875pt>
 File: figures/RespostaImpulsoGravidade.pdf Graphic file (type pdf)
 <use figures/RespostaImpulsoGravidade.pdf>
-Package pdftex.def Info: figures/RespostaImpulsoGravidade.pdf  used on input line 242.
+Package pdftex.def Info: figures/RespostaImpulsoGravidade.pdf  used on input line 272.
 (pdftex.def)             Requested size: 191.76599pt x 120.77892pt.
 
 
-LaTeX Font Info:    Trying to load font information for TS1+stix2 on input line 262.
+LaTeX Font Info:    Trying to load font information for TS1+stix2 on input line 292.
 (C:\Users\Rafael\AppData\Local\Programs\MiKTeX\tex/fonts/stix2-type1\ts1stix2.fd
 File: ts1stix2.fd 2018/04/02 v2.0.0-latex stix2 TS1 font definitions
 )
@@ -1687,7 +1686,7 @@ Package microtype Info: Character `textflorin ' is missing
 
 [3{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-ts1.enc}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-t1sc.enc} <./figures/RespostaDegrauGravidade.pdf> <./figures/RespostaImpulsoGravidade.pdf>] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
-Package pbalance Info: No two-column pages, doing nothing on input line 266.
+Package pbalance Info: No two-column pages, doing nothing on input line 296.
 
 Package pbalance Warning: Patching failed, cannot balance; try 
 (pbalance)                loading pbalance earlier or later.
@@ -1702,17 +1701,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47908 strings out of 468129
- 912189 string characters out of 5430128
- 1844349 words of memory out of 5000000
- 75458 multiletter control sequences out of 15000+600000
- 829694 words of font info for 299 fonts, out of 8000000 for 9000
+ 47925 strings out of 468129
+ 912487 string characters out of 5430128
+ 1844568 words of memory out of 5000000
+ 75468 multiletter control sequences out of 15000+600000
+ 837125 words of font info for 298 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 137i,13n,143p,1038b,1612s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 137i,12n,143p,1039b,1612s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Math.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Bold.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Italic.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Regular.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtti10.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (3 pages, 811338 bytes).
+Output written on main.pdf (3 pages, 816815 bytes).
 PDF statistics:
- 206 PDF objects out of 1000 (max. 8388607)
- 32 named destinations out of 1000 (max. 500000)
- 80505 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 225 PDF objects out of 1000 (max. 8388607)
+ 40 named destinations out of 1000 (max. 500000)
+ 82569 words of extra memory for PDF output out of 89155 (max. 10000000)
 
