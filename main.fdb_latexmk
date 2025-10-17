@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1760215907.5848 "main.bcf" "main.bbl" "main" 1760217541.79903 0
-  "main.bcf" 1760217541 108723 e6d97380fc3deb9cc7c850d69aa6a830 "pdflatex"
+["biber main"] 1760660575.38383 "main.bcf" "main.bbl" "main" 1760660580.77028 0
+  "main.bcf" 1760660580 108863 8572b6c4269390950752efbe23c9a079 "pdflatex"
   "tau.bib" 1759088190 750 e56ade55da687743b316f6494098c149 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1760217538.79184 "d:/Code/LatexControle/main.tex" "main.pdf" "main" 1760217541.7997 0
+["pdflatex"] 1760660577.74611 "d:/Code/LatexControle/main.tex" "main.pdf" "main" 1760660580.77097 0
   "C:/Users/Rafael/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1759085324 86408 6eadc8f721fdc2cb71986669445abbd7 ""
   "C:/Users/Rafael/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1759085415 13287491 096d7bf36214530b4eaa1b232daf0bd3 ""
   "C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -300,15 +300,15 @@
   "C:/Users/Rafael/AppData/Local/Programs/MiKTeX/tex/latex/xurl/xurl.sty" 1641733940 4675 e4b8c405820368c2dfb03526e16d725a ""
   "C:/Users/Rafael/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1750428951 2269 2de6c7a5fd634dfef00a960544463a38 ""
   "C:/Users/Rafael/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1750428951 20785 198a9cb2e04238d92c320d0d9edbd76a ""
-  "d:/Code/LatexControle/main.tex" 1760217534 19850 21f02531f9a9bc5ef6ebf661f7c010da ""
+  "d:/Code/LatexControle/main.tex" 1760660573 19185 b12d8dbd54a9b06284ab50a321dd3cf9 ""
   "figures/DiagramaFT.jpg" 1760217466 8730 046026edf40eac93ddc296712093692a ""
   "figures/DiagramaForca.jpg" 1759274419 14390 d0579b0c9833808e99e2ff38ae6bb7b7 ""
   "figures/RespostaDegrauGravidade.pdf" 1758685927 28670 fe31a49749b6c7d09609a1942f363eaa ""
   "figures/RespostaImpulsoGravidade.pdf" 1758685923 28410 90977e8a44a503179785f1d763bd502d ""
-  "main.aux" 1760217541 10494 27dcc57c6bc8f9bed62d892a831b3154 "pdflatex"
-  "main.bbl" 1760215909 4848 af72a5222ef0704027719635fc655f28 "biber main"
-  "main.run.xml" 1760217541 2398 c95872a99bafe59a258b77c766c0e592 "pdflatex"
-  "main.tex" 1760217534 19850 21f02531f9a9bc5ef6ebf661f7c010da ""
+  "main.aux" 1760660580 10636 31d16010b6d68e5d7f09805d8c2d037a "pdflatex"
+  "main.bbl" 1760660577 4848 af72a5222ef0704027719635fc655f28 "biber main"
+  "main.run.xml" 1760660580 2398 c95872a99bafe59a258b77c766c0e592 "pdflatex"
+  "main.tex" 1760660573 19185 b12d8dbd54a9b06284ab50a321dd3cf9 ""
   "tau-class/tau.cls" 1758514304 15347 2202da1b2390f2f9216c3aeb1d47c153 ""
   "tau-class/taubabel.sty" 1758514304 2385 ca8e0d3023401e5a01eb3f164d752a08 ""
   "tau-class/tauenvs.sty" 1758514304 3183 d5bbfc779d2505e5da39eeff038cc6e0 ""

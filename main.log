@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.28)  11 OCT 2025 18:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.28)  16 OCT 2025 21:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1401,7 +1401,7 @@ LaTeX Font Info:    Trying to load font information for T1+stix2 on input line 7
 File: t1stix2.fd 2018/04/02 v2.0.0-latex stix2 T1 font definitions
 ) (main.aux
 Package babel Info: 'portuguese' activates 'portuges' shorthands.
-(babel)             Reported on input line 22.
+(babel)             Reported on input line 27.
 )
 \openout1 = `main.aux'.
 
@@ -1634,48 +1634,56 @@ Package lettrine.sty Info: Targeted height = 15.846pt
 (lettrine.sty)             Lettrine height = 17.693pt ({\color {taucolor}\bfseries \fontsize {26pt}{28pt}\selectfont {O}});
 (lettrine.sty)             reported on input line 86.
 
+Underfull \hbox (badness 1454) in paragraph at lines 88--89
+[]\T1/stix2/m/n/9 (+20) Em sis-te-mas in-dus-tri-ais como bra-ços ro-bó-ti-cos e máquinas-
+ []
+
+
 
 
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.64998pt on input line 114.
+(Font)              scaled to size 6.64998pt on input line 116.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.64998pt on input line 114.
+(Font)              scaled to size 6.64998pt on input line 116.
 [1{C:/Users/Rafael/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-t1.enc}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}
 
 
-{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathit.enc}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathrm.enc}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathex.enc}]
+{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathit.enc}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathrm.enc}]
+Underfull \vbox (badness 1831) has occurred while \output is active []
 
-<figures/DiagramaFT.jpg, id=34, 562.1pt x 161.60374pt>
+
+
+<figures/DiagramaFT.jpg, id=36, 562.1pt x 161.60374pt>
 File: figures/DiagramaFT.jpg Graphic file (type jpg)
 <use figures/DiagramaFT.jpg>
-Package pdftex.def Info: figures/DiagramaFT.jpg  used on input line 208.
+Package pdftex.def Info: figures/DiagramaFT.jpg  used on input line 206.
 (pdftex.def)             Requested size: 204.55118pt x 58.80856pt.
-<figures/DiagramaForca.jpg, id=35, 563.10374pt x 586.19pt>
+<figures/DiagramaForca.jpg, id=37, 563.10374pt x 586.19pt>
 File: figures/DiagramaForca.jpg Graphic file (type jpg)
 <use figures/DiagramaForca.jpg>
-Package pdftex.def Info: figures/DiagramaForca.jpg  used on input line 219.
+Package pdftex.def Info: figures/DiagramaForca.jpg  used on input line 217.
 (pdftex.def)             Requested size: 204.55118pt x 212.93343pt.
 
 
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 234.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 232.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 6.64998pt on input line 234.
-[2{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathscr.enc} <./figures/DiagramaFT.jpg> <./figures/DiagramaForca.jpg>]
-<figures/RespostaDegrauGravidade.pdf, id=65, 390.45876pt x 245.91875pt>
+(Font)              scaled to size 6.64998pt on input line 232.
+[2{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathex.enc}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathscr.enc} <./figures/DiagramaFT.jpg> <./figures/DiagramaForca.jpg>]
+<figures/RespostaDegrauGravidade.pdf, id=67, 390.45876pt x 245.91875pt>
 File: figures/RespostaDegrauGravidade.pdf Graphic file (type pdf)
 <use figures/RespostaDegrauGravidade.pdf>
-Package pdftex.def Info: figures/RespostaDegrauGravidade.pdf  used on input line 265.
+Package pdftex.def Info: figures/RespostaDegrauGravidade.pdf  used on input line 263.
 (pdftex.def)             Requested size: 191.76599pt x 120.77892pt.
-<figures/RespostaImpulsoGravidade.pdf, id=66, 390.45876pt x 245.91875pt>
+<figures/RespostaImpulsoGravidade.pdf, id=68, 390.45876pt x 245.91875pt>
 File: figures/RespostaImpulsoGravidade.pdf Graphic file (type pdf)
 <use figures/RespostaImpulsoGravidade.pdf>
-Package pdftex.def Info: figures/RespostaImpulsoGravidade.pdf  used on input line 272.
+Package pdftex.def Info: figures/RespostaImpulsoGravidade.pdf  used on input line 270.
 (pdftex.def)             Requested size: 191.76599pt x 120.77892pt.
 
 
-LaTeX Font Info:    Trying to load font information for TS1+stix2 on input line 292.
+LaTeX Font Info:    Trying to load font information for TS1+stix2 on input line 290.
 (C:\Users\Rafael\AppData\Local\Programs\MiKTeX\tex/fonts/stix2-type1\ts1stix2.fd
 File: ts1stix2.fd 2018/04/02 v2.0.0-latex stix2 TS1 font definitions
 )
@@ -1686,7 +1694,7 @@ Package microtype Info: Character `textflorin ' is missing
 
 [3{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-ts1.enc}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-t1sc.enc} <./figures/RespostaDegrauGravidade.pdf> <./figures/RespostaImpulsoGravidade.pdf>] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
-Package pbalance Info: No two-column pages, doing nothing on input line 296.
+Package pbalance Info: No two-column pages, doing nothing on input line 294.
 
 Package pbalance Warning: Patching failed, cannot balance; try 
 (pbalance)                loading pbalance earlier or later.
@@ -1701,17 +1709,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47925 strings out of 468129
- 912487 string characters out of 5430128
+ 47911 strings out of 468129
+ 912274 string characters out of 5430128
  1844568 words of memory out of 5000000
- 75468 multiletter control sequences out of 15000+600000
- 837125 words of font info for 298 fonts, out of 8000000 for 9000
+ 75466 multiletter control sequences out of 15000+600000
+ 829072 words of font info for 291 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 137i,12n,143p,1039b,1612s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 137i,12n,143p,1092b,1612s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Math.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Bold.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Italic.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Regular.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtti10.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (3 pages, 816815 bytes).
+Output written on main.pdf (3 pages, 814376 bytes).
 PDF statistics:
- 225 PDF objects out of 1000 (max. 8388607)
+ 227 PDF objects out of 1000 (max. 8388607)
  40 named destinations out of 1000 (max. 500000)
- 82569 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 80521 words of extra memory for PDF output out of 89155 (max. 10000000)
 
