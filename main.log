@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.28)  16 OCT 2025 21:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.28)  16 OCT 2025 22:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1683,8 +1683,11 @@ Package pdftex.def Info: figures/RespostaImpulsoGravidade.pdf  used on input lin
 (pdftex.def)             Requested size: 191.76599pt x 120.77892pt.
 
 
-LaTeX Font Info:    Trying to load font information for TS1+stix2 on input line 290.
-(C:\Users\Rafael\AppData\Local\Programs\MiKTeX\tex/fonts/stix2-type1\ts1stix2.fd
+
+
+[3 <./figures/RespostaDegrauGravidade.pdf> <./figures/RespostaImpulsoGravidade.pdf>]
+LaTeX Font Info:    Trying to load font information for TS1+stix2 on input line 321.
+ (C:\Users\Rafael\AppData\Local\Programs\MiKTeX\tex/fonts/stix2-type1\ts1stix2.fd
 File: ts1stix2.fd 2018/04/02 v2.0.0-latex stix2 TS1 font definitions
 )
 Package microtype Info: Character `textflorin ' is missing
@@ -1692,9 +1695,13 @@ Package microtype Info: Character `textflorin ' is missing
 (microtype)             Ignoring protrusion settings for this character.
 
 
-[3{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-ts1.enc}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-t1sc.enc} <./figures/RespostaDegrauGravidade.pdf> <./figures/RespostaImpulsoGravidade.pdf>] 
+
+
+[4{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-ts1.enc}{C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-t1sc.enc}
+
+] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
-Package pbalance Info: No two-column pages, doing nothing on input line 294.
+Package pbalance Info: No two-column pages, doing nothing on input line 325.
 
 Package pbalance Warning: Patching failed, cannot balance; try 
 (pbalance)                loading pbalance earlier or later.
@@ -1709,17 +1716,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47911 strings out of 468129
- 912274 string characters out of 5430128
- 1844568 words of memory out of 5000000
- 75466 multiletter control sequences out of 15000+600000
- 829072 words of font info for 291 fonts, out of 8000000 for 9000
+ 47930 strings out of 468129
+ 912464 string characters out of 5430128
+ 1844569 words of memory out of 5000000
+ 75473 multiletter control sequences out of 15000+600000
+ 829386 words of font info for 293 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  137i,12n,143p,1092b,1612s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Math.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Bold.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Italic.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Regular.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtti10.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (3 pages, 814376 bytes).
+Output written on main.pdf (4 pages, 821130 bytes).
 PDF statistics:
- 227 PDF objects out of 1000 (max. 8388607)
- 40 named destinations out of 1000 (max. 500000)
- 80521 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 260 PDF objects out of 1000 (max. 8388607)
+ 48 named destinations out of 1000 (max. 500000)
+ 80577 words of extra memory for PDF output out of 89155 (max. 10000000)
 
