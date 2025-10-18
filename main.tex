@@ -310,6 +310,64 @@ A Figura X sobrepõe a resposta experimental do sistema a uma entrada em degrau 
 
 [Fazer um gráfico comparativo, com duas curvas (Experimental vs. Simulada)]
 
+\section{Projeto do Controlador}
+Utilizando o modelo matemático da planta, previamente validado por comparação com dados experimentais, esta seção detalhada do projeto de um controlador de posição para o sistema massa-mola. O objetivo é garantir que o sistema em malha fechada atenda aos requisitos de desempenho especificados.
+
+\subsection{Requisitos de Desempenho}
+
+[Defenir de forma clara, os dados abaixo são exemplos]
+
+\begin{itemize}
+    \item Tempo de acomodação para 2\% ($T_s$): Menor que 5 segundos.
+    \item Sobressinal máximo (Mp): Menor que 10\%.
+    \item Erro em regime estacionário para entrada degrau (ess): Zero.
+\end{itemize}
+
+\subsection{Escolha da Técnica e Tipo de Controlador}
+[Justificativa da metodologia, ex: LGR, e o tipo de controlador, ex: PID]
+
+
+\subsection{Desenvolvimento Matemático do Projeto}
+[Mostrar todo o desenvolvimento matemático para encontrar os ganhos do controlador, mostrando o LGR]
+
+[Colocar o diagrama do LGR]
+
+\section{Simulação do Sistema Controlado}
+Nesta seção, avalia-se o desempenho do controlador projetado por meio de simulação, utilizando o modelo da planta validado juntamente com o controlador.
+
+\subsection{implementação no Ambiente de Simulação}
+[Descrição como o sistema em malha fechada foi montado no MATLAB/Simulink]
+
+[Colocar o diagrama de blocos montado do Simulink]
+
+\subsection{Análise dos Resultados da simulação em Malha Fechada}
+[Fazer um gráfico da resposta do sistema controlado a uma entrada ao degrau. Descrever o que foi observado.]
+
+\section{Implementação e Testes no Protótipo}
+Esta seção descreve o processo de implementação do controlador projetado no microcontrolador (Arduino) e os resultados dos testes realizados no protótipo físico.
+
+\subsection{Implementação do Controlador Embarcado}
+[Descreva como a lei de controle foi discretizada e implementada no código, qual frequência de amostragem utilizada no loop de controle.]
+
+\subsection{Resultados dos Testes Experimentais em Malha Fechada}
+[Gráfico do protótipo real, agora em malha fechada e com o controlador, a uma entrada degrau. Coletar os dados do sensor a laser durante os testes.]
+
+[Colocar um gráfico da resposta ao degrau experimental do sistema em malha fechada.]
+
+\subsection{Comparação entre Desempenho Simulado e Real}
+[Sobrepor os gráficos da resposta simulada com o da resposta expermental. Fazer uma análise de semelhanças e diferenças no desempenho. Descutir as possíveis razões para as discrepâncias.]
+
+[Fazer um gráfico comparativo das respostas simulada e experimental em malha fechada.]
+
+\section{Análise Crítica e Conclusão Final}
+
+\begin{itemize}
+    \item Discussão da Eficácia
+    \item Limitações
+    \item Trabalhos Futuros
+    \item Aprendizado Adquirido
+\end{itemize}
+
 \section{Conclusão Parcial}
 
  A presente etapa do projeto culminou no desenvolvimento e simulação de um modelo matemático para o sistema de duas massas com acoplamento flexível. Foi obtida uma função de transferência que incorpora os parâmetros físicos do sistema, incluindo as massas, constantes elásticas e coeficientes de atrito, prevendo corretamente a natureza estável e de oscilação amortecida do sistema. A simulação computacional validou este comportamento dinâmico, fornecendo uma base sólida para a continuidade do projeto.
