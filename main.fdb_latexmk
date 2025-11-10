@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1760801032.49571 "main.bcf" "main.bbl" "main" 1760804577.99801 0
-  "main.bcf" 1760804577 108863 8572b6c4269390950752efbe23c9a079 "pdflatex"
+["biber main"] 1762730912.81597 "main.bcf" "main.bbl" "main" 1762736560.18056 0
+  "main.bcf" 1762736559 108863 8572b6c4269390950752efbe23c9a079 "pdflatex"
   "tau.bib" 1759088190 750 e56ade55da687743b316f6494098c149 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1760804574.55649 "d:/Code/LatexControle/main.tex" "main.pdf" "main" 1760804577.99872 0
+["pdflatex"] 1762736556.88186 "d:/Code/LatexControle/main.tex" "main.pdf" "main" 1762736560.18124 0
   "C:/Users/Rafael/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1759085324 86408 6eadc8f721fdc2cb71986669445abbd7 ""
   "C:/Users/Rafael/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1759085415 13287491 096d7bf36214530b4eaa1b232daf0bd3 ""
   "C:/Users/Rafael/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -300,15 +300,19 @@
   "C:/Users/Rafael/AppData/Local/Programs/MiKTeX/tex/latex/xurl/xurl.sty" 1641733940 4675 e4b8c405820368c2dfb03526e16d725a ""
   "C:/Users/Rafael/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1750428951 2269 2de6c7a5fd634dfef00a960544463a38 ""
   "C:/Users/Rafael/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1750428951 20785 198a9cb2e04238d92c320d0d9edbd76a ""
-  "d:/Code/LatexControle/main.tex" 1760804573 24079 6820d484074dcd3e71dfe8bf9d7a7e59 ""
+  "d:/Code/LatexControle/main.tex" 1762736554 29220 821cad3a6a84cfd7a99ab805a0e3eaba ""
   "figures/DiagramaFT.jpg" 1760217466 8730 046026edf40eac93ddc296712093692a ""
   "figures/DiagramaForca.jpg" 1759274419 14390 d0579b0c9833808e99e2ff38ae6bb7b7 ""
-  "figures/RespostaDegrauGravidade.pdf" 1758685927 28670 fe31a49749b6c7d09609a1942f363eaa ""
-  "figures/RespostaImpulsoGravidade.pdf" 1758685923 28410 90977e8a44a503179785f1d763bd502d ""
-  "main.aux" 1760804577 22232 1a8c6e40b9c25010348ec74036104e33 "pdflatex"
-  "main.bbl" 1760801036 4848 af72a5222ef0704027719635fc655f28 "biber main"
-  "main.run.xml" 1760804577 2398 c95872a99bafe59a258b77c766c0e592 "pdflatex"
-  "main.tex" 1760804573 24079 6820d484074dcd3e71dfe8bf9d7a7e59 ""
+  "figures/DiagramaSimulink.pdf" 1762733515 20227 5faae181b12f3db6e00ede6403a12997 ""
+  "figures/Lugar Geométrico das Raízes.pdf" 1762720510 32070 d1bd4df636c9f47729e3b4f8498bd2dd ""
+  "figures/Malha Aberta vs Malha Fechada.pdf" 1762720525 90294 589d6aa7a9f626f829d77b4cfca83626 ""
+  "figures/Resposta ao Impulso.pdf" 1762720586 82804 ade88b5582c8c434a02f62a32db1a327 ""
+  "figures/RespostaDegrau.pdf" 1762701761 28274 631d7e7b935ea7fe299cb00d8e1ee531 ""
+  "figures/RespostaImpulso.pdf" 1762701795 25938 b57eb850a45f733d82f752ba2aa2e42d ""
+  "main.aux" 1762736559 23415 d877eccd8dcee7514d9ee5669f067c24 "pdflatex"
+  "main.bbl" 1762730915 4848 af72a5222ef0704027719635fc655f28 "biber main"
+  "main.run.xml" 1762736559 2398 c95872a99bafe59a258b77c766c0e592 "pdflatex"
+  "main.tex" 1762736554 29220 821cad3a6a84cfd7a99ab805a0e3eaba ""
   "tau-class/tau.cls" 1758514304 15347 2202da1b2390f2f9216c3aeb1d47c153 ""
   "tau-class/taubabel.sty" 1758514304 2385 ca8e0d3023401e5a01eb3f164d752a08 ""
   "tau-class/tauenvs.sty" 1758514304 3183 d5bbfc779d2505e5da39eeff038cc6e0 ""

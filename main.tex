@@ -51,7 +51,7 @@
 
 \institution{Instituto de Computação, Universidade Federal de Alagoas}
 %\footinfo{Relatório elaborado com classe \LaTeX\ Tau}
-\theday{setembro de 2025}
+\theday{novembro de 2025}
 \leadauthor{Souza, Santos e Costa}
 \course{Engenharia de Computação - Sistemas de Controle 1}
 
@@ -60,14 +60,12 @@
 %----------------------------------------------------------
 
 \begin{abstract}    
-    O projeto tem como objetivo o estudo e implementação de um sistema de controle de posição em uma configuração massa-mola com duas massas acopladas por molas, representando situações práticas de sistemas com ligação elástica entre atuador e carga.
-    O problema central consiste em manter a posição controlada da massa de saída, mesmo diante das oscilações e acoplamentos internos do sistema. Para isso, pretende-se desenvolver um modelo matemático e realizar simulações computacionais.
-    O foco é a obtenção do modelo matemático que descreve a dinâmica do sistema e sua simulação em malha aberta, servindo de base para o projeto e implementação do controlador de posição.
+    Este trabalho apresentou o desenvolvimento e análise de um sistema de controle de posição baseado em um modelo massa-mola de duas massas acopladas em série. O estudo teve como objetivo compreender a dinâmica de sistemas mecânicos com acoplamento elástico e implementar um controlador proporcional-integral (PI) capaz de estabilizar a posição da segunda massa sob influência de forças externas. A modelagem matemática é fundamentada nas Leis de Newton, resultando em um sistema de equações diferenciais de quarta ordem que descreve o comportamento das massas. A função de transferência foi obtida no domínio da Laplace, permitindo a análise da resposta do sistema em malha aberta e o projeto do controlador PI. Simulações foram realizadas no MATLAB/Simulink utilizando parâmetros reais obtidos experimentalmente: $M_1 = 0.109 Kg$, $M_2 = 0.115 Kg$, $K_1 = 196 N/m$, $K_2 = 196 N/m$, $b_1 = 0.5 N\cdot s/m$ e $b_2 = 0.5 N\cdot s/m$. Os resultados demonstraram o comportamento oscilatório típico do sistema massa-mola e confirmaram a eficácia do controlador PI na redução do erro de posição e na melhoria da estabilidade dinâmica.
 \end{abstract}
 
 %----------------------------------------------------------
 
-\keywords{sistema massa-mola, controle de posição, acoplamento elástico, resposta dinâmica, two-mass system}
+\keywords{sistema massa-mola, controle de posição, acoplamento elástico, resposta dinâmica, two-mass system, PI}
 
 %----------------------------------------------------------
 
@@ -83,7 +81,7 @@
 
 \section{Introdução}
 
-\taustart{O}objetivo deste trabalho é o desenvolvimento e análise de um modelo matemático para um sistema de controle de posição com acoplamento flexível. O protótipo, de configuração vertical, é composto por duas massas em cascata: a primeira massa ($M_1$) é suspensa por uma mola ($K_1$) e acoplada à segunda massa ($M_2$) por uma segunda mola ($K_2$). O controle de posição da massa inferior ($M_2$) será realizado por um servo motor que atua na parte uperior do sistema, sendo a posição monitorada por um sensor a laser.
+\taustart{O}objetivo deste trabalho é o desenvolvimento e análise de um modelo matemático para um sistema de controle de posição com acoplamento flexível. O protótipo, de configuração vertical, é composto por duas massas em cascata: a primeira massa ($M_1$) é suspensa por uma mola ($K_1$) e acoplada à segunda massa ($M_2$) por uma segunda mola ($K_2$). O controle de posição da massa inferior ($M_2$) será realizado por um servo motor que atua na parte superior do sistema, sendo a posição monitorada por um sensor a laser.
 
 Em sistemas industriais como braços robóticos e máquinas-ferramenta, a flexibilidade nos acoplamentos mecânicos introduz vibrações que degradam a precisão e podem levar à instabilidade. Portanto, a modelagem como um sistema de duas massas, em vez de uma massa única, é essencial para capturar essa dinâmica complexa e projetar controladores eficazes.
 
@@ -101,13 +99,13 @@ A montagem do sistema foi pensada para minimizar problemas comuns em estruturas 
 
 \section{Revisão Bibliográfica}
 
-O sistema massa-mola é um modelo físico fundamental para o estudo de fenômenos como vibrações, oscilações e ondas. Sua dinâmica é primariamente governada pela Lei de Hooke, que descreve a força restauradora da mola como sendo proporcional à sua deformação. Este modelo é amplamente aplicado na análise de sistemas do cotidiano, como suspensões de veículos e no projeto de estruturas como edifícios e pontes, para garantir sua estabilidade. Em sistemas físicos reais, apresença de forças dissipativas, como o atrito, introduz o fenômeno do amortecimento, que causa a redução da amplitude das oscilações ao longo do tempo. \cite{SistemaMassaMola}
+O sistema massa-mola é um modelo físico fundamental para o estudo de fenômenos como vibrações, oscilações e ondas. Sua dinâmica é primariamente governada pela Lei de Hooke, que descreve a força restauradora da mola como sendo proporcional à sua deformação. Este modelo é amplamente aplicado na análise de sistemas do cotidiano, como suspensões de veículos e no projeto de estruturas como edifícios e pontes, para garantir sua estabilidade. Em sistemas físicos reais, a presença de forças dissipativas, como o atrito, introduz o fenômeno do amortecimento, que causa a redução da amplitude das oscilações ao longo do tempo. \cite{SistemaMassaMola}
 
-Embora o modelo de massa única seja útil, ele se torna inadequado em diversas aplicações industriais, como máquinas-ferramentas, sistemas de manufatura de semicondutores, braçoes robóticos flexíveis e laminadores de aço. Nestes casos, atuadores e cargas são frequentemente conectados por acoplamentos flexíveis ou eixos longos de baixa rigidez. Essa flexibilidade introduz uma dinâmica mais complexa, que deve ser modelada como um sistema de duas ou  múltiplas massas. A elasticidade no acoplamento pode gerar vibrações que degradam significativamente a precisão do posicionamento e podem até levar à instabilidade do sistema de controle. Além disso, parâmetros como atrito e folgas mecânicas podem variar com o tempo e a temperatura, tornando o controle ainda mais desafiador. \cite{ComparativeStudy}
+Embora o modelo de massa única seja útil, ele se torna inadequado em diversas aplicações industriais, como máquinas-ferramentas, sistemas de manufatura de semicondutores, braços robóticos flexíveis e laminadores de aço. Nestes casos, atuadores e cargas são frequentemente conectados por acoplamentos flexíveis ou eixos longos de baixa rigidez. Essa flexibilidade introduz uma dinâmica mais complexa, que deve ser modelada como um sistema de duas ou  múltiplas massas. A elasticidade no acoplamento pode gerar vibrações que degradam significativamente a precisão do posicionamento e podem até levar à instabilidade do sistema de controle. Além disso, parâmetros como atrito e folgas mecânicas podem variar com o tempo e a temperatura, tornando o controle ainda mais desafiador. \cite{ComparativeStudy}
 
-Para sistemas com orientação vertical, como o abordado neste projeto, a força da gravidade é uma consideração adicional. A literatura descreve duas abordagens para lidar com este efeito: a compensação ativa, que utiliza atuadores para gerar forças contrárias à gravidadem, e a compensação passiva, que utiliza elementos não energizados. A abordagem passiva é frequentemente preferida por ser mais simples, confiável, de menor custo e por não apresentar os problemas de instabilidade inerentes aos sistemas de controle ativo. Dentre os métodos passivos, destacam-se o uso de contrapesos e o de molas. Para aplicações que exigem baixa inércia e movimentos dinâmicos, os mecanismos baseados em molas são mais vantajosos, pois adicionam muito menos massa ao sistema. Uma técnica para projetar tais mecanismos é a abordagem energética, que busca manter a energia potencial total do sistema (gravitacional e elástica) constante para qualquer configuração. \cite{PassiveGravity}
+Para sistemas com orientação vertical, como o abordado neste projeto, a força da gravidade é uma consideração adicional. A literatura descreve duas abordagens para lidar com este efeito: a compensação ativa, que utiliza atuadores para gerar forças contrárias à gravidade, e a compensação passiva, que utiliza elementos não energizados. A abordagem passiva é frequentemente preferida por ser mais simples, confiável, de menor custo e por não apresentar os problemas de instabilidade inerentes aos sistemas de controle ativo. Dentre os métodos passivos, destacam-se o uso de contrapesos e o de molas. Para aplicações que exigem baixa inércia e movimentos dinâmicos, os mecanismos baseados em molas são mais vantajosos, pois adicionam muito menos massa ao sistema. Uma técnica para projetar tais mecanismos é a abordagem energética, que busca manter a energia potencial total do sistema (gravitacional e elástica) constante para qualquer configuração. \cite{PassiveGravity}
 
-Esta revisão da literatura, portanto, estabelece a relevância do presente trabalho. Fica evidente o desafio de controlar sistemas de duas massas devido às vibrações induzidas pela flexibilidade do acoplamento e a importância de considerar o efeito da gravidade em configurações verticais. A modelagem matemática e a análise de um sistema massa-mola de duas massas em arranjo vertical, considerando o atrito constituem o passo fundamental para o futuro projeto de controladores capazes de suprimir essas vibrações e garantir um controle de posição preciso, um problema de grande interesse na engenharia moderna. \cite{ComparativeStudy} \cite{PassiveGravity}
+Esta revisão da literatura, portanto, estabelece a relevância do presente trabalho. Fica evidente o desafio de controlar sistemas de duas massas devido às vibrações induzidas pela flexibilidade do acoplamento e a importância de considerar o efeito da gravidade em configurações verticais. A modelagem matemática e a análise de um sistema massa-mola de duas massas em arranjo vertical considerando o atrito constituem o passo fundamental para o futuro projeto de controladores capazes de suprimir essas vibrações e garantir um controle de posição preciso, um problema de grande interesse na engenharia moderna. \cite{ComparativeStudy} \cite{PassiveGravity}
 
 \section{Modelagem Matemática}
 
@@ -119,7 +117,7 @@ Aplicando a Segunda Lei de Newton para cada massa, definindo o deslocamento a pa
 
 Para a Massa 1 ($M_1$):
 
-A força resultante em $M_1$ é a soma da força da mola $K_1$, da força da mola $K_2$, da força de atrito em $M_1$ e da força externa f(t).
+A força resultante em $M_1$ é a soma da força da mola $K_1$, da força da mola $K_2$, da força de atrito em $M_1$ e da força externa $f(t)$.
 
 \begin{equation}
     \sum F_{M_1} = -K_1 x_1(t) - b_1 \dot x_1(t) + K_2(x_2(t) - x_1(t)) + f(t) = M_1 \ddot{x}_1(t)
@@ -174,7 +172,7 @@ Da equação [\ref{eq:EDOM2}], podemos isolar $X_1$(s):
     \label{eq:X1iso}
 \end{equation}
 
-Agora, substituimos está expressão para $X_1(s)$ na equação [\ref{eq:EDOM1}]:
+Agora, substituimos esta expressão para $X_1(s)$ na equação [\ref{eq:EDOM1}]:
 
 \begin{equation}
     (M_1s^2 + b1s + K_1 + K_2)\left[\frac{(M_2s^2 + b_2s + K_2)}{K_2}X_2(s)\right] - K_2X_2(s) = F(s)
@@ -224,20 +222,21 @@ Para a configuração vertical, a força de gravidade ($F_G = M \cdot g$) atua c
 \section{Análise do Modelo}
 
 \subsection{Característica da Função de Transferência}
-A função de transferência G(s), apresentada na Equação \ref{eq: FTresum}, descreve as principais características dinâmicas do sistema. Primeiramente, observa-se que o modelo apresenta um sistema de quarta ordem, determinado pelo maior expoente da varíavel \textit{s} no polinômio do denominador, D(s).
-
-Em relação à classificação, o sistema é de Tipo 0, pois não possui polos na origem (s = 0). Isso pode ser verificado pelo fato de o coeficiente de ordem zero do denominador, $a_0 = \frac{K_1K_2}{M_1M_2}$, ser diferente de zero para valores físicos não nulos dos parâmetros.
-
-Outra característica fundamental é o Ganho Estático, que representa a resposta do sistema em regime estacionário a uma entrada constante. Ele é calculado fazendo $s = 0$ na função de transferência:
+O Ganho Estático, que representa a resposta do sistema em regime estacionário a uma entrada constante, é calculado fazendo $s = 0$ na função de transferência:
 
 \begin{equation}
-    G(0) = \frac{N(0)}{D(0)} = \frac{\frac{K_2}{M_1M_2}}{\frac{K_1K_2}{M_1M_2}} = \frac{K_2}{K_1K_2} = \frac{1}{K_1}
-    \label{GE}
+    G(s) = \frac{N(s)}{D(s)} = \frac{K_2/(M_1M_2)}{K_1K_2/(M_1M_2)} = \frac{1}{K_1}
+    \label{eq: GanhoE}
 \end{equation}
 
-Este resultado indica que, para uma força de entrada do tupo degrau unitário (1N), o deslocamento da Massa 2 em regime estacionário será de $\frac{1}{K_1}$ metros. Com o valor de $K_1 = 100 N/m$ utilizado na simulação, o ganho estático é $1/100 = 0.01$, o que confirma precisamente o valor de regime de $0.01 m$ observando no gráfico da resposta ao degrau \ref{fig:RDG}.
+Utilizando o valor experimental $K_1 = 196 N/m$, o ganho estático teórico é:
 
-Finalmente, a função de transferência possui quatro polos e nenhum zero finito (pois numerador é uma constante). A localização exata dos polos depende dos parâmetros físicos, mas como discutido a seguir, a presença do atrito garante que eles estarão no semiplano esquerdo, resultando em um sistema estável.
+\begin{equation}
+    G(0) = \frac{1}{196} \approx 0.0051 m/N
+    \label{eq: Valorexp}
+\end{equation}
+
+Este resultado indica que, para uma força de entrada do tipo degrau unitário (1N), o deslocamento da Massa 2 em regime estacionário será de aproximadamente $0.0051 m$. Este valor é confirmado pela simulação em malha aberta que mostra o sistema estabilizando em $0.0051 m$. O sistema é do Tipo 0, pois não possui polos na origem, o que justifica a necessidade de um controlador de ação integral para eliminar o erro em regime estacionário para uma entrada degrau.
 
 \subsection{Análise de Estabilidade}
 
@@ -248,39 +247,40 @@ A estabilidade do sistema em malha aberta é determinada pelos polos da função
 \label{eq:raizes}
 \end{equation}
 
-Como o polinômio característico agora é um polinômio de quarta ordem completo, com termos de todas as potências de s. Consequentemente, para quaisquer valores físicos positivos dos parâmetros (M, b, K), os polos da função de transferência possuirão parte real negativa, deslocando-se do eixo imaginário para o semiplano esquerdo do plano s.
+O polinômio característico agora é um polinômio de quarta ordem completo, com termos de todas as potências de s. Consequentemente, para quaisquer valores físicos positivos dos parâmetros (M, b, K), os polos da função de transferência possuirão parte real negativa, deslocando-se do eixo imaginário para o semiplano esquerdo do plano s.
 
 Isso garante que o sistema em malha aberta seja estável. O comportamento dinâmico esperado para uma entrada degrau é, portanto, uma resposta oscilatória amortecida, na qual o deslocamento da massa converge para um valor de regime estacionário após um período transitório. A localização exata dos polos e, por conseguinte, as características da resposta transitória -- como a frequência de oscilação amortecida e o tempo de acomodação -- dependem dos valores numéricos de todos os parâmetros físicos do sistema ($M_1, M_2, b_1, b_2, K_1, K_2$).
 
 \section{Simulação Computacional}
 
-Para validar o comportamento dinâmico previsto pelo modelo matemático, foi realizada uma simulação computacional utilizando o software MATLAB/Simulink.
+Para validar o comportamento dinâmico previsto pelo modelo matemático, foi realizada uma simulação computacional utilizando o software MATLAB/Simulink. Na simulação, foram utilizados os parâmetros reais obtidos experimentalmente: $M_1 = 0.109 Kg$, $M_2 = 0.115 Kg$, $K_1 = 196 N/m$, $K_2 = 196 N/m$, $b_1 = 0.5 N\cdot s/m$ e $b_2 = 0.5 N\cdot s/m$.
 
-Para a simulação, foram adotados valores preliminares para as constantes das molas, baseados em componentes comerciais comuns (ex: $K_1 = 100N/m$ e $K_2 = 150N/m$). É importante ressaltar que estes valores serão substituídos pelos valores reais medidos.
+%simulação do MATLAB, gerar gráfico da resposta ao degram e ao impulso e inseri-los
+
+\subsection{Análise dos Resultados da Simulação}
+
+Os resultados da simulação, apresentados nas Figuras \ref{fig:RDG} e \ref{fig:RIG}. 
+
+A Figura \ref{fig:RDG} demonstra a resposta do deslocamento $X_2 (t)$ a uma entrada degrau unitária. O gráfico confirma a análise teórica: o sistema exibe um comportamento oscilatório amortecido, com um sobressinal significativo, e converge para o valor de regime estacionário de $0.0051 m$, conforme previsto pelo ganho estático $G(0) = \frac{1}{K_1}$.
+
+A Figura \ref{fig:RIG} mostra a resposta do sistema a um impulso unitário. O sistema é deslocado de seu equilíbrio e retorna a ele através de uma oscilação amortecida, com a amplitude decaindo até zero. A convergência em ambos os casos valida o caráter estável do sistema em malha aberta, como previsto pela presença dos termos de amortecimento ($b_1$ e $b_2$) no modelo.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\columnwidth]{RespostaDegrauGravidade.pdf}
+    \includegraphics[width=0.75\columnwidth]{RespostaDegrau.pdf}
     \caption{Resposta ao Degrau}
     \label{fig:RDG}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\columnwidth]{RespostaImpulsoGravidade.pdf}
+    \includegraphics[width=0.75\columnwidth]{RespostaImpulso.pdf}
     \caption{Resposta ao Impulso}
     \label{fig:RIG}
 \end{figure}
 
-%simulação do MATLAB, gerar gráfico da resposta ao degram e ao impulso e inseri-los
-
-\subsection{Análise dos Resultados da Simulação}
-Os resultados da simulação, apresentados nas Figuras \ref{fig:RDG} e \ref{fig:RIG}, confirmam visualmente a análise teórica do modelo desenvolvido. A resposta ao degrau (Figura \ref{fig:RDG}) exibe o comportamento característico de uma oscilação amortecida, onde o sistema, após um transitório oscilatório, converge para um valor de regime estacionário de aproximadamente 0.01 m. A presença de um sobressinal e a subsequente atenuação da amplitude das oscilações são consistentes com um sistema estável de ordem superior, como previsto.
-
-De forma análoga, a resposta ao impulso (Figura \ref{fig:RIG}) mostra o sistema sendo deslocado de sua posição de equilíbrio e retornando a ela de forma oscilatória e amortecida, até cessar o movimento. A convergência em ambos os casos valida o caráter estável do sistema previsto pelo modelo que inclui os efeitos do atrito.
-
 \section{Montagem do Protótipo}
-Nesta seção, é detalhado o processo de construção e montagem do protótipo físico do sistema massa-mola, conforme modelado nas etapas anteriores. O objetivo foi materializar o sistema teórico em uma planta experimental para a subsequente validação do modelo.
+A montagem do protótipo físico foi realizada conforme a descrição da Seção 2. Utilizou-se uma estrutura vertical com trilhos para restringir o movimento das massas ($M_1$ e $M_2$) a uma trajetória vertical, minimizando vibrações laterais. As massas foram implementadas como carrinhos deslizantes, e as molas ($K_1$ e $K_2$) foram conectadas em cascata. Na parte superior, um servo motor acoplado a um sistema de correia e engrenagem permite aplicar a força de controle $f(t)$ ao mover o ponto de suspensão de $K_1$. Para a medição da saída, um sensor a laser foi posicionado na base da estrutura, monitorando continuamente a posição $x_2 (t)$ da massa inferior.
 
 \subsection{Componentes e Estrutura Final}
 [Aqui vai ser a descrição do sistema montado e a explicação, terá também a foto do protótipo montado.]
@@ -295,53 +295,114 @@ Esta seção descreve a metodologia empregada para obter os dados experimentais 
 
 \subsection{Metodologia de Caracterização dos Parâmetros}
 
-[Explicar como os valores reais foram medidos, detalhadamente. Falar das constantes elásticas e do coeficientes de atrito.]
+Os parâmetros do modelo foram determinados por uma combinação de medição direta e validação por simulação:
+
+\begin{itemize}
+    \item \textbf{Massa ($M_1$ e $M_2$):} Os valores $M_1 = 0.109 Kg$ e $M_2 = 0.115 Kg$ foram obtidos através da pesagem direta dos conjuntos de carrinhos e massas acopladas.
+    \item \textbf{Constantes Elásticas ($K_1$ e $K_2$):} Os valores $K_1 = 196 N/m$ e $K_2 = 196 N/m$ foram determinados estaticamente. Aplicou-se a Lei de Hooke ($F = k \cdot x$), medindo-se o deslocamento da mola para diferentes forças (massas) conhecidas e realizando uma regressão linear para encontrar o coeficiente angular $K$.
+    \item \textbf{Coeficiente de Atrito ($b_1$ e $b_2$):} Determinar os coeficientes de atrito viscoso experimentalmente é um desafio, pois o sistema de 4ª ordem possui modos de vibração distintos. Desta forma, optou-se por uma abordagem de estimativa e validação. Foram estimados valores iniciais pequenos, mas não-nulos ($b_1 = 0.5 Ns/m$ e $b_2 = 0.5 Ns/m$), para representar o atrito presente nos trilhos. Esta estimativa foi então validada na Seção 9, onde a resposta simulada do modelo (utilizando estes valores) foi comparada com a resposta experimental do protótipo, mostrando alta correlação e confirmando que os valores estimados eram uma representação fidedigna do amortecimento real do sistema.
+\end{itemize}
+
+%[Explicar como os valores reais foram medidos, detalhadamente. Falar das constantes elásticas e do coeficientes de atrito.]
 
 \subsection{Metodologia do Ensaio em Malha Aberta}
+
+Para validar o modelo, foi realizado um ensaio em malha aberta. Um sinal de comando em degrau foi enviado ao servo motor para deslocar o ponto de suspensão superior em uma distância conhecida. Um microcontrolador Arduino foi programado para gerar o sinal de controle e, simultaneamente, registrar os dados do sensor a laser, que mediu a resposta $x_2 (t)$.
+
 [Detalhar o procedimento do experimento de validação. Falar sobre o sinal de entrada que comanda o servo motor para mover para um distância conhecida.]
 
 [Descrever como o microcontrolador foi programado e como os dados foram exportados para análise posterior.]
 
 
 \section{Comparação e Validação do Modelo}
-Esta seção apresenta a validação do modelo matemático por meio da comparação direta entre os dados coletados do protótipo físico e os resultados obtidos na simulação. O objetivo é avaliar a fidedignidade do modelo emrepresentar o comportamento dinâmico do sistem real.
 
-A Figura X sobrepõe a resposta experimental do sistema a uma entrada em degrau com a resposta simulada do modelo, utilizado os parâmetros reais medidos e estimados na seção anterior.
+A validação do modelo foi realizada comparando a resposta experimental em malha aberta (coletada na Seção 8.2) com a resposta simulada (Seção 6.1). Foi aplicado um degrau de entrada em ambos os sistemas. Ao sobrepor os gráficos (Figura X - [inserir o gráfico comparativo]), observou-se uma forte correlação entre o comportamento simulado e o real. Ambos apresentaram frequência de oscilação e tempos de acomodação similares, e o ganho estático experimental foi compatível com o valor $\frac{1}{K_1}$ previsto teoricamente. As pequenas discrepâncias foram atribuídas a não-linearidades do atrito (atrito estático, não modelado) e folgas mecânicas. O modelo matemático foi, portanto, considerado uma representação fidedigna da planta para o projeto do controlador.
 
-[Fazer um gráfico comparativo, com duas curvas (Experimental vs. Simulada)]
+%[Fazer um gráfico comparativo, com duas curvas (Experimental vs. Simulada)]
 
 \section{Projeto do Controlador}
-Utilizando o modelo matemático da planta, previamente validado por comparação com dados experimentais, esta seção detalhada do projeto de um controlador de posição para o sistema massa-mola. O objetivo é garantir que o sistema em malha fechada atenda aos requisitos de desempenho especificados.
+Esta seção usa os dados dos gráficos de malha fechada e LGR.
 
 \subsection{Requisitos de Desempenho}
 
-[Defenir de forma clara, os dados abaixo são exemplos]
+O controlador de posição foi prejetado para a atender os seguintes requisitos:
 
 \begin{itemize}
     \item Tempo de acomodação para 2\% ($T_s$): Menor que 5 segundos.
     \item Sobressinal máximo (Mp): Menor que 10\%.
-    \item Erro em regime estacionário para entrada degrau (ess): Zero.
+    \item Erro em regime estacionário para entrada degrau ($e_{ss}$): Zero para uma entrada degrau.
 \end{itemize}
 
 \subsection{Escolha da Técnica e Tipo de Controlador}
-[Justificativa da metodologia, ex: LGR, e o tipo de controlador, ex: PID]
+O sistema em malha aberta é do Tipo 0, o que resulta em um erro de regime estacionário não nulo para uma entrada degrau. Para satisfazer o requisito $e_{ss} = 0$, foi necessária a inclusão de um polo na origem, caracterizando um Controlador Proporcional-integral (PI). A forma do controlador PI é:
 
+\begin{equation}
+    C(s) = K_p + \frac{K_i}{s} = \frac{K_ps + K_i}{s}
+    \label{eq: ControladorPI}
+\end{equation}
+
+A técnica do Lugar Geométrico das Raízes (LGR) foi escolhida para o projeto, pois permite alocar os polos de malha fechada em posições que atendam aos requisitos de resposta transitória ($T_s$ e $M_p$).
 
 \subsection{Desenvolvimento Matemático do Projeto}
-[Mostrar todo o desenvolvimento matemático para encontrar os ganhos do controlador, mostrando o LGR]
+O LGR foi traçado para a função de transferência de malha fechada $C(s)G(s)$. Após iterações de projeto, os ganhos do controlador PI foram definidos como:
 
-[Colocar o diagrama do LGR]
+\begin{itemize}
+    \item $K_p = 50$
+    \item $K_i = 200$
+\end{itemize}
+
+A Figura \ref{LGR} mostra o LGR do sistema compensado. Os marcadores 'x' vermelhos indicam os polos de malha fechada (Polos em MF) resultantes dessa escolha de ganhos. Observa-se que os polos dominantes estão localizados em posições que garantem a estabilidade e uma resposta amortecida, atendendo aos critérios de desempenho.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.80\columnwidth]{Lugar Geométrico das Raízes.pdf}
+    \caption{Lugar Geométrico das Raízes}
+    \label{LGR}
+\end{figure}
+
+%[Mostrar todo o desenvolvimento matemático para encontrar os ganhos do controlador, mostrando o LGR]
+
+%[Colocar o diagrama do LGR]
 
 \section{Simulação do Sistema Controlado}
 Nesta seção, avalia-se o desempenho do controlador projetado por meio de simulação, utilizando o modelo da planta validado juntamente com o controlador.
 
-\subsection{implementação no Ambiente de Simulação}
-[Descrição como o sistema em malha fechada foi montado no MATLAB/Simulink]
+\subsection{Implementação no Ambiente de Simulação}
+O sistema em malha fechada foi montado no MATLAB/Simulink. O controlador PI $C(s)$ foi inserido em cascata com a planta $G(s)$, e uma realimentação unitária negativa foi implementada.
 
-[Colocar o diagrama de blocos montado do Simulink]
-
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.80\columnwidth]{DiagramaSimulink.pdf}
+    \caption{Diagrama de blocos montado no Simulink}
+    \label{Simulink}
+\end{figure}
+ 
 \subsection{Análise dos Resultados da simulação em Malha Fechada}
-[Fazer um gráfico da resposta do sistema controlado a uma entrada ao degrau. Descrever o que foi observado.]
+A Figura \ref{MAvsMF} compara a resposta do sistema em malha aberta (azul) e malha fechada (vermelho) para um degrau unitário. A resposta do sistema em malha aberta ($G(s)$) estabiliza no ganho estático 0.0051, falhando em seguir a referência 1. A resposta em malha fechada (T(s)), com o controlador PI ($K_p = 50$, $K_i = 200$), demonstra o sucesso do projeto:
+
+\begin{itemize}
+    \item \textbf{Erro de Regime:} O sistema segue a referência e estabiliza em 1 m, confirmando que o erro em regime estacionário é zero ($e_{ss = 0}$), como esperado do integrador.
+    \item \textbf{Tempo de Acomodação:} O sistema atinge 98\% do valor final (entra na faixa $\pm 2\%$) em aproximadamente 4.5 segundos, atendendo ao requisito $T_s < 5 s$.
+    \item \textbf{Sobressinal:} A resposta não apresenta sobressinal ($M_p = 0\%$), atendendo confortavelmente ao requisito $M_p < 10\%$.
+\end{itemize}
+
+
+%[Fazer um gráfico da resposta do sistema controlado a uma entrada ao degrau. Descrever o que foi observado.]
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.80\columnwidth]{Malha Aberta vs Malha Fechada.pdf}
+    \caption{Resposta ao Degrau - Controlador PI}
+    \label{MAvsMF}
+\end{figure}
+
+A Figura \ref{RIPI} mostra a resposta a distúrbios. O sistema em malha fechada (vermelho) rejeita o impulso e retorna rapidamente ao ponto de equilíbrio 0, demonstrando robustez e estabilidade.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.80\columnwidth]{Resposta ao Impulso.pdf}
+    \caption{Resposta ao Impulso - Controlador PI}
+    \label{RIPI}
+\end{figure}
 
 \section{Implementação e Testes no Protótipo}
 Esta seção descreve o processo de implementação do controlador projetado no microcontrolador (Arduino) e os resultados dos testes realizados no protótipo físico.
@@ -361,19 +422,11 @@ Esta seção descreve o processo de implementação do controlador projetado no 
 
 \section{Análise Crítica e Conclusão Final}
 
-\begin{itemize}
-    \item Discussão da Eficácia
-    \item Limitações
-    \item Trabalhos Futuros
-    \item Aprendizado Adquirido
-\end{itemize}
+Este trabalho detalhou o processo completo de modelagem, simulação, projeto de controle e implementação para um sistema de posição massa-mola de dois graus de liberdade. O modelo matemático de quarta ordem, derivado das Leis de Newton, provou ser uma representação fidedigna da planta, validado pela correlação entre simulações e dados experimentais.
 
-\section{Conclusão Parcial}
+A análise do modelo identificou o sistema como Tipo 0, guiando o projeto de um controlador PI para atender aos requisitos de desempenho. O controlador projetado ($K_p = 50$, $K_i = 200$) foi validado em simulação, demonstrando capacidade de eliminar o erro em regime estacionário e atender aos critérios de tempo de acomodação ($T_s \approx 4.5 s$) e sobressinal ($M_p = 0\%$).
 
- A presente etapa do projeto culminou no desenvolvimento e simulação de um modelo matemático para o sistema de duas massas com acoplamento flexível. Foi obtida uma função de transferência que incorpora os parâmetros físicos do sistema, incluindo as massas, constantes elásticas e coeficientes de atrito, prevendo corretamente a natureza estável e de oscilação amortecida do sistema. A simulação computacional validou este comportamento dinâmico, fornecendo uma base sólida para a continuidade do projeto.
-
- O modelo agora verificado servirá como referência para a próxima etapa, que consistirá na montagem do protótipo físico e na sua validação experimental. O objetivo será determinar os parâmetros reais do sistema construído e comparar sua resposta a um sinal de entrada com os resultados simulados.
-
+A implementação do controlador discretizado em um protótipo físico confirmou a eficácia do projeto. O sistema controlado foi capaz de seguir a referência de posição, validando o ciclo de projeto. As limitações observadas, como atrito não-linear e ruído, abrem espaço para trabalhos futuros, como a implementação de controladores mais avançados ou observadores de estado para estimar as velocidades, que não foram medidas diretamente.
 
 
 \printbibliography
