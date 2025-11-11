@@ -32,7 +32,6 @@
 \author[a,1]{Rafael Anacleto Alves de Souza}
 \author[a,2]{Elvis Correia Lopes dos Santos}
 \author[a,3]{Guilherme de Oliveira Costa}
-%\author[a,4]{Pedro de Carvalho Cedrim}
 
 
 %----------------------------------------------------------
@@ -41,7 +40,6 @@
 \textsuperscript{1}\texttt{raas@ic.ufal.br}, 
 \textsuperscript{2}\texttt{ecls@ic.ufal.br}, 
 \textsuperscript{3}\texttt{goc@ic.ufal.br}}
-%\textsuperscript{4}\texttt{pcc@ic.ufal.br}}
 
 \professor{Prof. Dr. Icaro Bezerra Queiroz de Araujo}
 
@@ -283,12 +281,44 @@ A Figura \ref{fig:RIG} mostra a resposta do sistema a um impulso unitário. O si
 A montagem do protótipo físico foi realizada conforme a descrição da Seção 2. Utilizou-se uma estrutura vertical com trilhos para restringir o movimento das massas ($M_1$ e $M_2$) a uma trajetória vertical, minimizando vibrações laterais. As massas foram implementadas como carrinhos deslizantes, e as molas ($K_1$ e $K_2$) foram conectadas em cascata. Na parte superior, um servo motor acoplado a um sistema de correia e engrenagem permite aplicar a força de controle $f(t)$ ao mover o ponto de suspensão de $K_1$. Para a medição da saída, um sensor a laser foi posicionado na base da estrutura, monitorando continuamente a posição $x_2 (t)$ da massa inferior.
 
 \subsection{Componentes e Estrutura Final}
-[Aqui vai ser a descrição do sistema montado e a explicação, terá também a foto do protótipo montado.]
 
-\subsection{Esquemas Elétricos e Mecânicos}
-[Possíveis diagramas técnicos da montagem, podendo ter o esquema elétrico do circuito, mostrando as ligações entre o Arduino, o sensor, servo motor e a fonte de alimentação.]
+A estrutura final do protótipo foi implementada inicialmente para uma configuração vertical, porém sendo feito testes e percebendo um bom funcionamento na horizontal, conforme apresentado nas Figuras \ref{fig:PrototipoTop} e \ref{fig:PrototipoLateral}. Esta abordagem foi escolhida para facilitar a montagem, a observação dinâmica e a medição de parâmetros.
 
-[Inserir também um desenho técnico ou CAD da montagem mecânica.]
+\begin{itemize}
+    \item \textbf{Base e Guia Linear:} A fundação do protótipo é um perfil de alumínio extrudado que atua como guia linear. Este trilho restringe o movimento dos carrinhos a um único grau de liberdade (longitudinal), garantindo um deslocamento com baixo atrito.
+    \item \textbf{Massas ($M_1$ e $M_2$):} O sistema dinâmico sob estudo é composto por duas massas principais. Estas são representadas pelos dois carrinhos impressos em 3D (peças laranja) que estão conectados entre si por uma mola. Conforme o modelo, o carrinho central é a Massa 1 ($M_1$) e o carrinho da extremidade oposta ao motor é a Massa 2 ($M_2$). Cada carrinho possui pequenas esferas que sevem como rolamentos para deslizar suavimente sobre o trilho.
+    \item \textbf{Acionamento e Transmissão:} O acionamento é feito por um servo motor (modelo DS3230MG) fixado em uma das extremidades. Para conectar o motor ao sistema, um terceiro carrinho (o mais próximo do motor) é utilizado. A massa desse carrinho é considerada desprezível em relação as massas principais, e sua única função é atuar como o elo de ligação mecânica para a correia de borracha do motor. A força de controle $f(t)$ é, portanto, aplicada a este carrinho, que por sua vez traciona a Mola 1 ($K_1$).
+    \item \textbf{Controlador e Eletrônica:} O sistema é gerenciado por um microcontrolador Arduino, que se comunica com o servo motor e o sensor de posição. O sistema é alimentado por uma fonte de energia externa.
+\end{itemize}
+
+O funcionamento do protótipo baseia-se no acionamento do servo motor em uma extremidade, que aplica uma força em um dos carrinhos. Essa força é então propagada para as massas subsequentes através das molas flexíveis. O desafio do controle é, portanto, atuar na primeira massa para controlar a posição da última massa, gerenciando as vibrações e atrasos introduzindo pelos acoplamentos elásticos.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\columnwidth]{prototipo_vTopo.jpg}
+    \caption{Visão superior do protótipo}
+    \label{fig:PrototipoTop}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\columnwidth]{prototipo_vLateral.jpg}
+    \caption{Visão lateral do protótipo}
+    \label{fig:PrototipoLateral}
+\end{figure}
+
+%[Aqui vai ser a descrição do sistema montado e a explicação, terá também a foto do protótipo montado.]
+
+%\subsection{Esquemas Elétricos e Mecânicos}
+
+%Para complementar a descrição da montagem, esta seção detalha os diagramas técnicos que representam as conexões elétricas e a estrutura mecênica do protótipo.
+
+%\subsubsection{Esquema Elétrico}
+%[Possíveis diagramas técnicos da montagem, podendo ter o esquema elétrico do circuito, mostrando as ligações entre o Arduino, o sensor, servo motor e a fonte de alimentação.]
+
+%\subsubsection{Esquema Mecânico}
+%[Inserir também um desenho técnico ou CAD da montagem mecânica.]
 
 \section{Coleta de Dados Experimentais}
 Esta seção descreve a metodologia empregada para obter os dados experimentais da planta real, tanto para a caracterização dos seus parâmetros quanto para a validação da resposta dinâmica.
@@ -307,16 +337,20 @@ Os parâmetros do modelo foram determinados por uma combinação de medição di
 
 \subsection{Metodologia do Ensaio em Malha Aberta}
 
-Para validar o modelo, foi realizado um ensaio em malha aberta. Um sinal de comando em degrau foi enviado ao servo motor para deslocar o ponto de suspensão superior em uma distância conhecida. Um microcontrolador Arduino foi programado para gerar o sinal de controle e, simultaneamente, registrar os dados do sensor a laser, que mediu a resposta $x_2 (t)$.
+Para validar o modelo, foi realizado um ensaio em malha abeta no protótipo físico. O objetivo foi coletar a resposta real do sistema a uma entrada conhecida para compará-la com a resposta simulada.
 
-[Detalhar o procedimento do experimento de validação. Falar sobre o sinal de entrada que comanda o servo motor para mover para um distância conhecida.]
+O procedimento de validação consistiu em aplicar um sinal de entrada do tipo degrau ao sistema. Isso foi feito programando o servo motor (DS3230MG) para mover o ponto de suspensão superior em uma distância fixa e conhecida de forma abrupta e, em seguida, mater essa nova posição. A força exervida pela mola $K_1$, agora esticada, atuou como a entrada de força no restante do sistema.
 
-[Descrever como o microcontrolador foi programado e como os dados foram exportados para análise posterior.]
+O microcontrolador foi programado em C++ através do Arduino IDE. Um loop de amostragem foi criado para resgistrar continuamente a posição da Massa 2, $x_2 (t)$, lida pelo sensor a laser. Cada leitura de posição foi pareada com seu respectivo registro de tempo, obtido através da função millis().
+
+% [Detalhar o procedimento do experimento de validação. Falar sobre o sinal de entrada que comanda o servo motor para mover para um distância conhecida.]
+
+% [Descrever como o microcontrolador foi programado e como os dados foram exportados para análise posterior.]
 
 
-\section{Comparação e Validação do Modelo}
+%\section{Comparação e Validação do Modelo}
 
-A validação do modelo foi realizada comparando a resposta experimental em malha aberta (coletada na Seção 8.2) com a resposta simulada (Seção 6.1). Foi aplicado um degrau de entrada em ambos os sistemas. Ao sobrepor os gráficos (Figura X - [inserir o gráfico comparativo]), observou-se uma forte correlação entre o comportamento simulado e o real. Ambos apresentaram frequência de oscilação e tempos de acomodação similares, e o ganho estático experimental foi compatível com o valor $\frac{1}{K_1}$ previsto teoricamente. As pequenas discrepâncias foram atribuídas a não-linearidades do atrito (atrito estático, não modelado) e folgas mecânicas. O modelo matemático foi, portanto, considerado uma representação fidedigna da planta para o projeto do controlador.
+% A validação do modelo foi realizada comparando a resposta experimental em malha aberta (coletada na Seção 8.2) com a resposta simulada (Seção 6.1). Foi aplicado um degrau de entrada em ambos os sistemas. Ao sobrepor os gráficos (Figura X - [inserir o gráfico comparativo]), observou-se uma forte correlação entre o comportamento simulado e o real. Ambos apresentaram frequência de oscilação e tempos de acomodação similares, e o ganho estático experimental foi compatível com o valor $\frac{1}{K_1}$ previsto teoricamente. As pequenas discrepâncias foram atribuídas a não-linearidades do atrito (atrito estático, não modelado) e folgas mecânicas. O modelo matemático foi, portanto, considerado uma representação fidedigna da planta para o projeto do controlador.
 
 %[Fazer um gráfico comparativo, com duas curvas (Experimental vs. Simulada)]
 
@@ -404,31 +438,33 @@ A Figura \ref{RIPI} mostra a resposta a distúrbios. O sistema em malha fechada 
     \label{RIPI}
 \end{figure}
 
-\section{Implementação e Testes no Protótipo}
-Esta seção descreve o processo de implementação do controlador projetado no microcontrolador (Arduino) e os resultados dos testes realizados no protótipo físico.
+% \section{Implementação e Testes no Protótipo}
+% Esta seção descreve o processo de implementação do controlador projetado no microcontrolador (Arduino) e os resultados dos testes realizados no protótipo físico.
 
-\subsection{Implementação do Controlador Embarcado}
-[Descreva como a lei de controle foi discretizada e implementada no código, qual frequência de amostragem utilizada no loop de controle.]
+% \subsection{Implementação do Controlador Embarcado}
+% [Descreva como a lei de controle foi discretizada e implementada no código, qual frequência de amostragem utilizada no loop de controle.]
 
-\subsection{Resultados dos Testes Experimentais em Malha Fechada}
-[Gráfico do protótipo real, agora em malha fechada e com o controlador, a uma entrada degrau. Coletar os dados do sensor a laser durante os testes.]
+% \subsection{Resultados dos Testes Experimentais em Malha Fechada}
+% [Gráfico do protótipo real, agora em malha fechada e com o controlador, a uma entrada degrau. Coletar os dados do sensor a laser durante os testes.]
 
-[Colocar um gráfico da resposta ao degrau experimental do sistema em malha fechada.]
+% [Colocar um gráfico da resposta ao degrau experimental do sistema em malha fechada.]
 
-\subsection{Comparação entre Desempenho Simulado e Real}
-[Sobrepor os gráficos da resposta simulada com o da resposta expermental. Fazer uma análise de semelhanças e diferenças no desempenho. Descutir as possíveis razões para as discrepâncias.]
+% \subsection{Comparação entre Desempenho Simulado e Real}
+% [Sobrepor os gráficos da resposta simulada com o da resposta expermental. Fazer uma análise de semelhanças e diferenças no desempenho. Descutir as possíveis razões para as discrepâncias.]
 
-[Fazer um gráfico comparativo das respostas simulada e experimental em malha fechada.]
+% [Fazer um gráfico comparativo das respostas simulada e experimental em malha fechada.]
 
 \section{Análise Crítica e Conclusão Final}
 
-Este trabalho detalhou o processo completo de modelagem, simulação, projeto de controle e implementação para um sistema de posição massa-mola de dois graus de liberdade. O modelo matemático de quarta ordem, derivado das Leis de Newton, provou ser uma representação fidedigna da planta, validado pela correlação entre simulações e dados experimentais.
+Este trabalho detalhou o processo completo de modelagem, análise e projeto de controle para um sistema de posição massa-mola de dois graus de liberdade. O modelo matemático de quarta ordem, derivado das Leis de Newton, foi minuciosamente analisado, indentificando o sistema como Tipo 0 e da natureza estável, porém subamortecida. A simulação em malha aberta confirmou o comportamento dinâmico oscilatório e o ganho estático previsto pelo modelo.
 
-A análise do modelo identificou o sistema como Tipo 0, guiando o projeto de um controlador PI para atender aos requisitos de desempenho. O controlador projetado ($K_p = 50$, $K_i = 200$) foi validado em simulação, demonstrando capacidade de eliminar o erro em regime estacionário e atender aos critérios de tempo de acomodação ($T_s \approx 4.5 s$) e sobressinal ($M_p = 0\%$).
+A análise do modelo orientou o projeto de um controlador Proporcional-Integral (PI), escolhido especificamente para atender aos requisitos de precisão de erro zero em regime estacionário, tempo de acomodação inferior a 5 segundos e sobressinal máximo de 10\%.
 
-A implementação do controlador discretizado em um protótipo físico confirmou a eficácia do projeto. O sistema controlado foi capaz de seguir a referência de posição, validando o ciclo de projeto. As limitações observadas, como atrito não-linear e ruído, abrem espaço para trabalhos futuros, como a implementação de controladores mais avançados ou observadores de estado para estimar as velocidades, que não foram medidas diretamente.
+O controlador projetado, com ganhos $K_p = 50$ e $K_i = 200$, foi validado com sucesso no ambiente de simulação (MATLAB/Simulink). Os resultados da simulação em malha fechada demonstraram a total capacidade do projeto em atender a todos os requisitos propostos, alcançando um tempo de acomodação de aproximadamente 4.5 segundos e um sobressinal de 0\%. O estudo conclui, portanto, o ciclo de projeto e análise teórica, fornecendo um modelo de controlador robusto e validado em simulação.
 
 
+
+\newpage
 \printbibliography
 
 %----------------------------------------------------------
